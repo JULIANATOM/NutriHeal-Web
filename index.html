@@ -1147,27 +1147,25 @@
     /* ══════════════════════════════════════
        BOTÓN EN DIRECTO
        ══════════════════════════════════════ */
-    .live-btn {
+    .live-wrapper {
       position: fixed;
       top: calc(var(--nav-h) + .85rem);
       right: 1.5rem;
       z-index: 998;
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: .45rem;
-      background: rgba(11, 31, 22, .88);
-      color: white;
-      text-decoration: none;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      padding: .42rem .85rem;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 60, 60, .45);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transition: background .25s, border-color .25s, transform .2s;
+      gap: .32rem;
+    }
+    .live-btn {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: rgba(11, 31, 22, .88); color: white;
+      font-family: var(--font-sans); cursor: pointer;
+      font-size: .72rem; font-weight: 700; letter-spacing: .07em;
+      text-transform: uppercase; padding: .42rem .85rem;
+      border-radius: 20px; border: 1px solid rgba(255, 60, 60, .45);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      transition: background .25s, border-color .25s, transform .2s, box-shadow .3s;
       white-space: nowrap;
     }
     .live-btn:hover {
@@ -1175,17 +1173,42 @@
       border-color: rgba(255, 80, 80, .75);
       transform: scale(1.05);
     }
-    .live-dot {
-      width: 7px;
-      height: 7px;
-      background: #ff3c3c;
-      border-radius: 50%;
-      flex-shrink: 0;
-      animation: livePulse 1.5s ease-in-out infinite;
+
+    /* Estado ON-AIR: glow pulsante en el botón */
+    .live-btn.is-live {
+      border-color: rgba(255, 60, 60, .75);
+      animation: btnGlow 2.2s ease-in-out infinite;
     }
-    @keyframes livePulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 60, 60, .75); }
-      60%       { box-shadow: 0 0 0 5px rgba(255, 60, 60, 0); }
+    @keyframes btnGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 60, 60, .3); }
+      50%       { box-shadow: 0 0 16px 5px rgba(255, 60, 60, .18), 0 0 0 7px rgba(255, 60, 60, .05); }
+    }
+
+    /* Dot: pulso activo durante transmisión / parpadeo suave fuera de horario */
+    .live-dot {
+      width: 7px; height: 7px; background: #ff3c3c;
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .live-btn.is-live .live-dot {
+      animation: dotPulse 1.2s ease-in-out infinite;
+    }
+    .live-btn:not(.is-live) .live-dot {
+      animation: dotBlink 2.4s ease-in-out infinite;
+    }
+    @keyframes dotPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 60, 60, .85); opacity: 1; }
+      55%       { box-shadow: 0 0 0 5px rgba(255, 60, 60, 0);  opacity: .8; }
+    }
+    @keyframes dotBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: .2; }
+    }
+
+    /* Texto de horario bajo el botón */
+    .live-schedule {
+      font-size: .6rem; font-family: var(--font-sans);
+      color: rgba(255, 255, 255, .38); letter-spacing: .06em;
+      text-align: center; white-space: nowrap; line-height: 1;
     }
 
     /* ── SOCIAL ICONS ── */
@@ -1368,10 +1391,13 @@
   </nav>
 
   <!-- ══ BOTÓN EN DIRECTO ══ -->
-  <button onclick="openLiveModal()" class="live-btn"
-          aria-label="Ver transmisión en vivo" aria-haspopup="dialog">
-    <span class="live-dot"></span> EN DIRECTO
-  </button>
+  <div class="live-wrapper">
+    <button onclick="openLiveModal()" class="live-btn" id="liveBtnEl"
+            aria-label="Ver transmisión en vivo" aria-haspopup="dialog">
+      <span class="live-dot"></span> EN DIRECTO
+    </button>
+    <span class="live-schedule">Todos los días &nbsp;|&nbsp; 8:00 PM</span>
+  </div>
 
   <!-- Mobile nav (fuera del nav para no verse afectado por su transform) -->
   <div class="nav-mobile-overlay" id="mobileMenu">
@@ -1968,6 +1994,17 @@
     /* ══════════════════════════════════════
        MODAL EN DIRECTO
        ══════════════════════════════════════ */
+    /* ── Estado ON-AIR por horario (19:55 – 21:15 hora local) ── */
+    function updateLiveState() {
+      const btn = document.getElementById('liveBtnEl');
+      if (!btn) return;
+      const now  = new Date();
+      const hhmm = now.getHours() * 100 + now.getMinutes(); // ej. 20:05 → 2005
+      btn.classList.toggle('is-live', hhmm >= 1955 && hhmm <= 2115);
+    }
+    updateLiveState();
+    setInterval(updateLiveState, 30000); // re-evalúa cada 30 s
+
     const LIVE_SRC = 'https://www.youtube.com/embed/live_stream?channel=UCH_utuhANZJL4mvJbzeLhIw&autoplay=1&rel=0&modestbranding=1';
 
     function openLiveModal() {
