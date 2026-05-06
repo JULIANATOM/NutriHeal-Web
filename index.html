@@ -1311,80 +1311,8 @@
       }
     }
     /* ══════════════════════════════════════
-       MODAL EN DIRECTO
+       BOTÓN EN DIRECTO
        ══════════════════════════════════════ */
-    .live-modal-overlay {
-      position: fixed; inset: 0; z-index: 2000;
-      background: rgba(0, 0, 0, .82);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex; align-items: center; justify-content: center;
-      padding: 1.25rem;
-      opacity: 0; visibility: hidden;
-      transition: opacity .3s ease, visibility .3s ease;
-    }
-    .live-modal-overlay.open { opacity: 1; visibility: visible; }
-
-    .live-modal-box {
-      background: #0B1F16;
-      border-radius: 12px;
-      width: 100%; max-width: 880px;
-      border: 1px solid rgba(116, 198, 157, .2);
-      overflow: hidden;
-      transform: scale(.94) translateY(18px);
-      transition: transform .38s cubic-bezier(.34, 1.56, .64, 1);
-      box-shadow: 0 32px 80px rgba(0, 0, 0, .7);
-    }
-    .live-modal-overlay.open .live-modal-box { transform: scale(1) translateY(0); }
-
-    .live-modal-header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .9rem 1.25rem;
-      border-bottom: 1px solid rgba(116, 198, 157, .12);
-    }
-    .live-modal-title {
-      display: flex; align-items: center; gap: .55rem;
-      color: white; font-size: .78rem; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase;
-    }
-    .live-modal-close {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: rgba(255, 255, 255, .08); border: none;
-      cursor: pointer; color: rgba(255,255,255,.75); font-size: 1rem;
-      display: flex; align-items: center; justify-content: center;
-      transition: background .2s, color .2s; line-height: 1;
-    }
-    .live-modal-close:hover { background: rgba(255, 60, 60, .35); color: white; }
-
-    .live-iframe-wrap {
-      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-      background: #000;
-    }
-    .live-iframe-wrap iframe {
-      position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%; border: none; display: block;
-    }
-    .live-modal-note {
-      padding: .65rem 1.25rem;
-      font-size: .72rem; color: rgba(255, 255, 255, .3);
-      text-align: center; border-top: 1px solid rgba(116, 198, 157, .08);
-    }
-    .live-rescue-btn {
-      display: block; margin: .75rem 1.25rem .25rem;
-      padding: .75rem 1.25rem;
-      background: rgba(255,0,0,.15);
-      border: 1px solid rgba(255,80,80,.5);
-      border-radius: 8px;
-      color: #ff6b6b;
-      font-size: .82rem; font-weight: 600;
-      text-align: center; text-decoration: none;
-      transition: background .2s, border-color .2s;
-    }
-    .live-rescue-btn:hover {
-      background: rgba(255,0,0,.28);
-      border-color: rgba(255,80,80,.9);
-      color: #ff9999;
-    }
   </style>
 </head>
 
@@ -1409,10 +1337,10 @@
 
   <!-- ══ BOTÓN EN DIRECTO ══ -->
   <div class="live-wrapper">
-    <button onclick="openLiveModal()" class="live-btn" id="liveBtnEl"
-            aria-label="Ver transmisión en vivo" aria-haspopup="dialog">
+    <a href="https://www.youtube.com/live/B3-o8df19xM" target="_blank" rel="noopener noreferrer"
+       class="live-btn" id="liveBtnEl" aria-label="Ver transmisión en vivo en YouTube">
       <span class="live-dot"></span> EN DIRECTO
-    </button>
+    </a>
     <span class="live-schedule">Todos los días &nbsp;|&nbsp; 8:00 PM</span>
   </div>
 
@@ -1808,34 +1736,6 @@
     </svg>
   </a>
 
-  <!-- ══ MODAL EN DIRECTO ══════════════════════════════════ -->
-  <div class="live-modal-overlay" id="liveModal"
-       role="dialog" aria-modal="true" aria-label="Transmisión en vivo — Dr. Germán Mestizo">
-    <div class="live-modal-box">
-      <div class="live-modal-header">
-        <div class="live-modal-title">
-          <span class="live-dot" style="width:8px;height:8px;"></span>
-          Transmisión en Vivo &nbsp;·&nbsp; Dr. Germán Mestizo
-        </div>
-        <button class="live-modal-close" onclick="closeLiveModal()" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="live-iframe-wrap">
-        <iframe id="liveIframe"
-          src=""
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          title="NutriHeal EN DIRECTO">
-        </iframe>
-      </div>
-      <a href="https://www.youtube.com/live/B3-o8df19xM" target="_blank" rel="noopener noreferrer" class="live-rescue-btn">
-        🔴 Si el video no carga, HAZ CLIC AQUÍ para verlo en YouTube
-      </a>
-      <p class="live-modal-note">
-        Si no hay transmisión activa, YouTube mostrará el último contenido disponible del canal.
-      </p>
-    </div>
-  </div>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -2025,37 +1925,6 @@
     updateLiveState();
     setInterval(updateLiveState, 30000); // re-evalúa cada 30 s
 
-    const LIVE_SRC = 'https://www.youtube-nocookie.com/embed/B3-o8df19xM?autoplay=1&mute=1&rel=0&modestbranding=1';
-
-    function openLiveModal() {
-      const overlay = document.getElementById('liveModal');
-      const iframe  = document.getElementById('liveIframe');
-      iframe.src = LIVE_SRC;
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      // Foco accesible en el botón de cierre
-      setTimeout(() => overlay.querySelector('.live-modal-close').focus(), 50);
-    }
-
-    function closeLiveModal() {
-      const overlay = document.getElementById('liveModal');
-      const iframe  = document.getElementById('liveIframe');
-      overlay.classList.remove('open');
-      setTimeout(() => { iframe.src = ''; }, 320); // espera al fade-out para detener el video
-      document.body.style.overflow = '';
-    }
-
-    // Cerrar al hacer clic fuera del cuadro
-    document.getElementById('liveModal').addEventListener('click', function(e) {
-      if (e.target === this) closeLiveModal();
-    });
-
-    // Cerrar con tecla Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && document.getElementById('liveModal').classList.contains('open')) {
-        closeLiveModal();
-      }
-    });
   </script>
 </body>
 
