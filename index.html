@@ -1369,6 +1369,22 @@
       font-size: .72rem; color: rgba(255, 255, 255, .3);
       text-align: center; border-top: 1px solid rgba(116, 198, 157, .08);
     }
+    .live-rescue-btn {
+      display: block; margin: .75rem 1.25rem .25rem;
+      padding: .75rem 1.25rem;
+      background: rgba(255,0,0,.15);
+      border: 1px solid rgba(255,80,80,.5);
+      border-radius: 8px;
+      color: #ff6b6b;
+      font-size: .82rem; font-weight: 600;
+      text-align: center; text-decoration: none;
+      transition: background .2s, border-color .2s;
+    }
+    .live-rescue-btn:hover {
+      background: rgba(255,0,0,.28);
+      border-color: rgba(255,80,80,.9);
+      color: #ff9999;
+    }
   </style>
 </head>
 
@@ -1812,6 +1828,9 @@
           title="NutriHeal EN DIRECTO">
         </iframe>
       </div>
+      <a href="https://www.youtube.com/live/B3-o8df19xM" target="_blank" rel="noopener noreferrer" class="live-rescue-btn">
+        🔴 Si el video no carga, HAZ CLIC AQUÍ para verlo en YouTube
+      </a>
       <p class="live-modal-note">
         Si no hay transmisión activa, YouTube mostrará el último contenido disponible del canal.
       </p>
@@ -2006,7 +2025,7 @@
     updateLiveState();
     setInterval(updateLiveState, 30000); // re-evalúa cada 30 s
 
-    const LIVE_SRC = 'https://www.youtube.com/embed/B3-o8df19xM?autoplay=1&mute=1&rel=0&modestbranding=1';
+    const LIVE_SRC = 'https://www.youtube-nocookie.com/embed/B3-o8df19xM?autoplay=1&mute=1&rel=0&modestbranding=1';
 
     function openLiveModal() {
       const overlay = document.getElementById('liveModal');
