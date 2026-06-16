@@ -5,3 +5,8 @@
 # Claude Code (configuración local del IDE)
 .claude/
 */.claude/
+
+# Credenciales — NUNCA subir a git
+.env
+*.env
+nutriheal/.env

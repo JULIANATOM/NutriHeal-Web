@@ -1,0 +1,904 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Suplementos dietarios",
+      "subcategorias": [
+        {
+          "id": 1,
+          "nombre": "Gastrointestinal"
+        },
+        {
+          "id": 2,
+          "nombre": "Probiotics"
+        },
+        {
+          "id": 3,
+          "nombre": "D-Tox"
+        },
+        {
+          "id": 4,
+          "nombre": "Hepático"
+        },
+        {
+          "id": 5,
+          "nombre": "Cardiovascular"
+        },
+        {
+          "id": 6,
+          "nombre": "Insuficiencia Venosa"
+        },
+        {
+          "id": 7,
+          "nombre": "Articular"
+        },
+        {
+          "id": 10,
+          "nombre": "Sistema Inmunológico"
+        },
+        {
+          "id": 11,
+          "nombre": "Metabolismo"
+        },
+        {
+          "id": 13,
+          "nombre": "Sistema Nervioso"
+        },
+        {
+          "id": 15,
+          "nombre": "Urinario"
+        },
+        {
+          "id": 17,
+          "nombre": "Visión"
+        },
+        {
+          "id": 18,
+          "nombre": "Endocrino"
+        },
+        {
+          "id": 19,
+          "nombre": "Antioxidantes"
+        },
+        {
+          "id": 20,
+          "nombre": "Dermatología"
+        },
+        {
+          "id": 21,
+          "nombre": "Figura"
+        },
+        {
+          "id": 22,
+          "nombre": "Minerales"
+        },
+        {
+          "id": 23,
+          "nombre": "Vitaminas"
+        },
+        {
+          "id": 24,
+          "nombre": "Multivitamínicos"
+        },
+        {
+          "id": 25,
+          "nombre": "Masa Muscular"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Medicamentos",
+      "subcategorias": [
+        {
+          "id": 8,
+          "nombre": "Articular"
+        },
+        {
+          "id": 14,
+          "nombre": "Sistema Nervioso"
+        },
+        {
+          "id": 16,
+          "nombre": "P-Natal"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Fitoterapéuticos",
+      "subcategorias": [
+        {
+          "id": 9,
+          "nombre": "Articular"
+        },
+        {
+          "id": 12,
+          "nombre": "Sistema Nervioso"
+        }
+      ]
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "codigo": "NV9902",
+      "nombre": "BETAPEPZINC",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Gastrointestinal",
+      "subcategoria_id": 1,
+      "registro_invima": "SD2021-0004596",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 2,
+      "codigo": "NV1713",
+      "nombre": "DIGEZIMES",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Gastrointestinal",
+      "subcategoria_id": 1,
+      "registro_invima": "SD2015-0003438",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 3,
+      "codigo": "NV1073",
+      "nombre": "SPOROGENEX",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Probiotics",
+      "subcategoria_id": 2,
+      "registro_invima": "SD2023-0004692",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 4,
+      "codigo": "NV1767",
+      "nombre": "FLORAWELL",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Probiotics",
+      "subcategoria_id": 2,
+      "registro_invima": "SD2013-0002822",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 5,
+      "codigo": "NV468",
+      "nombre": "VOID",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "D-Tox",
+      "subcategoria_id": 3,
+      "registro_invima": "SD2012-0002604",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 6,
+      "codigo": "NV467",
+      "nombre": "D-PURE AM-PM",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "D-Tox",
+      "subcategoria_id": 3,
+      "registro_invima": "SD2013-0003014",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 7,
+      "codigo": "NV1689",
+      "nombre": "LAX-ON",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "D-Tox",
+      "subcategoria_id": 3,
+      "registro_invima": "SD2013-0002888",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 8,
+      "codigo": "NV1682",
+      "nombre": "LEBER",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Hepático",
+      "subcategoria_id": 4,
+      "registro_invima": "SD2013-0002935",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 9,
+      "codigo": "NV1975",
+      "nombre": "HEPINÉ",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Hepático",
+      "subcategoria_id": 4,
+      "registro_invima": "PFTI2021-0002815",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 10,
+      "codigo": "NV1671",
+      "nombre": "MEGA RED KRILL",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Cardiovascular",
+      "subcategoria_id": 5,
+      "registro_invima": "SD2013-0002984",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 11,
+      "codigo": "NV458",
+      "nombre": "OCEAN BLUE",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Cardiovascular",
+      "subcategoria_id": 5,
+      "registro_invima": "SD2021-0004575",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 12,
+      "codigo": "NV1692",
+      "nombre": "CITRICHOLESS",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Cardiovascular",
+      "subcategoria_id": 5,
+      "registro_invima": "SD2013-0002907",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 13,
+      "codigo": "NV2124",
+      "nombre": "C-ZYME Q10",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Cardiovascular",
+      "subcategoria_id": 5,
+      "registro_invima": "SD2020-0004508",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 14,
+      "codigo": "NV1548",
+      "nombre": "CORONALL",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Cardiovascular",
+      "subcategoria_id": 5,
+      "registro_invima": "SD2024-0004734",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 15,
+      "codigo": "NV1728",
+      "nombre": "NEO VEINS",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Insuficiencia Venosa",
+      "subcategoria_id": 6,
+      "registro_invima": "INVIMA 2015M-0016530",
+      "precio": 0.0,
+      "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
+      "activo": true
+    },
+    {
+      "id": 16,
+      "codigo": "NV9949",
+      "nombre": "OSSEIM UCII UNDERNATURE COLLAGEN TYPE II",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Articular",
+      "subcategoria_id": 7,
+      "registro_invima": "SD2015-0003597",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 17,
+      "codigo": "NV1546A",
+      "nombre": "NUTRA JOINT COMFORT",
+      "categoria": "Medicamentos",
+      "categoria_id": 2,
+      "subcategoria": "Articular",
+      "subcategoria_id": 8,
+      "registro_invima": "INVIMA 2018M-0018048",
+      "precio": 0.0,
+      "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
+      "activo": true
+    },
+    {
+      "id": 18,
+      "codigo": "NV1691",
+      "nombre": "DYPHLAMIN",
+      "categoria": "Fitoterapéuticos",
+      "categoria_id": 3,
+      "subcategoria": "Articular",
+      "subcategoria_id": 9,
+      "registro_invima": "PFM2012-0001934",
+      "precio": 0.0,
+      "observaciones": "* De venta libre. * No exceda su consumo. * Leer indicaciones, contraindicaciones y advertencias en la etiqueta. * Si los síntomas persisten, consultar al médico.",
+      "activo": true
+    },
+    {
+      "id": 19,
+      "codigo": "NV1683",
+      "nombre": "IMMBOOST",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Sistema Inmunológico",
+      "subcategoria_id": 10,
+      "registro_invima": "SD2013-0002758",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 20,
+      "codigo": "NV2074",
+      "nombre": "ISOTYPES 5 IMG 1.000 MG",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Sistema Inmunológico",
+      "subcategoria_id": 10,
+      "registro_invima": "SD2016-0003776",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 21,
+      "codigo": "NV1686",
+      "nombre": "ALLER-7",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Sistema Inmunológico",
+      "subcategoria_id": 10,
+      "registro_invima": "SD2015-0003460",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 22,
+      "codigo": "NV1788",
+      "nombre": "GLUCOVITA",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Metabolismo",
+      "subcategoria_id": 11,
+      "registro_invima": "SD2013-0002970",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 23,
+      "codigo": "NV1706",
+      "nombre": "CHROMOX GTF CHROMIUM PICOLINATE 500mg",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Metabolismo",
+      "subcategoria_id": 11,
+      "registro_invima": "SD2012-0002630",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 24,
+      "codigo": "NV1976",
+      "nombre": "DYROX",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Metabolismo",
+      "subcategoria_id": 11,
+      "registro_invima": "SD2015-0003690",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 25,
+      "codigo": "NV1684",
+      "nombre": "DEMZENIL",
+      "categoria": "Fitoterapéuticos",
+      "categoria_id": 3,
+      "subcategoria": "Sistema Nervioso",
+      "subcategoria_id": 12,
+      "registro_invima": "PFM2012-0001915",
+      "precio": 0.0,
+      "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
+      "activo": true
+    },
+    {
+      "id": 26,
+      "codigo": "NV1693",
+      "nombre": "MEMOBRITE",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Sistema Nervioso",
+      "subcategoria_id": 13,
+      "registro_invima": "SD2013-0002832",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 27,
+      "codigo": "NV759",
+      "nombre": "SOMNA",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Sistema Nervioso",
+      "subcategoria_id": 13,
+      "registro_invima": "SD2013-0002889",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 28,
+      "codigo": "NV835",
+      "nombre": "NEUROX",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Sistema Nervioso",
+      "subcategoria_id": 13,
+      "registro_invima": "SD2014-0001864-R1",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 29,
+      "codigo": "NV1670",
+      "nombre": "MELATONINA",
+      "categoria": "Medicamentos",
+      "categoria_id": 2,
+      "subcategoria": "Sistema Nervioso",
+      "subcategoria_id": 14,
+      "registro_invima": "INVIMA 2015M-0016375",
+      "precio": 0.0,
+      "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
+      "activo": true
+    },
+    {
+      "id": 30,
+      "codigo": "NV1690",
+      "nombre": "PROGENIL",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Urinario",
+      "subcategoria_id": 15,
+      "registro_invima": "SD2013-0002847",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 31,
+      "codigo": "NV1911",
+      "nombre": "MAXCRAN CRANBERRY 1.100 MG",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Urinario",
+      "subcategoria_id": 15,
+      "registro_invima": "SD2015-0003680",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 32,
+      "codigo": "NV1583",
+      "nombre": "NEFROX",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Urinario",
+      "subcategoria_id": 15,
+      "registro_invima": "SD2013-0002992",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 33,
+      "codigo": "NV1904",
+      "nombre": "P-NATAL WITH DHA",
+      "categoria": "Medicamentos",
+      "categoria_id": 2,
+      "subcategoria": "P-Natal",
+      "subcategoria_id": 16,
+      "registro_invima": "INVIMA 2016M-0016999",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 34,
+      "codigo": "NV2046",
+      "nombre": "VITAVER",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Visión",
+      "subcategoria_id": 17,
+      "registro_invima": "SD2015-0003712",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 35,
+      "codigo": "NV1685",
+      "nombre": "GENIX",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Endocrino",
+      "subcategoria_id": 18,
+      "registro_invima": "SD2013-0002901",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 36,
+      "codigo": "NV1981",
+      "nombre": "SURFEM",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Endocrino",
+      "subcategoria_id": 18,
+      "registro_invima": "SD2014-0003324",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 37,
+      "codigo": "NV1688",
+      "nombre": "FemmeSense",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Endocrino",
+      "subcategoria_id": 18,
+      "registro_invima": "SD2013-0002864",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 38,
+      "codigo": "NV1886",
+      "nombre": "TORNARE",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Antioxidantes",
+      "subcategoria_id": 19,
+      "registro_invima": "SD2015-0003674",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 39,
+      "codigo": "NV9901",
+      "nombre": "LP-SOMAL L-GLUTATHIONE 500MG",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Antioxidantes",
+      "subcategoria_id": 19,
+      "registro_invima": "SD2021-0004601",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 40,
+      "codigo": "NV1982",
+      "nombre": "KAPILSAN",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Dermatología",
+      "subcategoria_id": 20,
+      "registro_invima": "SD2015-0003659",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 41,
+      "codigo": "NV1992",
+      "nombre": "XENSOR",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Figura",
+      "subcategoria_id": 21,
+      "registro_invima": "SD2018-0004167",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 42,
+      "codigo": "NV1667",
+      "nombre": "OSTEOWELL",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Minerales",
+      "subcategoria_id": 22,
+      "registro_invima": "SD2011-0002155",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 43,
+      "codigo": "NV1795",
+      "nombre": "OSEOMASS CAL-MAG-ZINC PLUS VD3",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Minerales",
+      "subcategoria_id": 22,
+      "registro_invima": "SD2014-0003260",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 44,
+      "codigo": "NV1875",
+      "nombre": "NOPHOS MAGNESIUM CITRATE",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Minerales",
+      "subcategoria_id": 22,
+      "registro_invima": "SD2025-0004968",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 45,
+      "codigo": "NV1876",
+      "nombre": "MAGX3",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Minerales",
+      "subcategoria_id": 22,
+      "registro_invima": "SD2015-0003666",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 46,
+      "codigo": "NV197",
+      "nombre": "CAROTENALL E",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Vitaminas",
+      "subcategoria_id": 23,
+      "registro_invima": "SD2025-0004956",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 47,
+      "codigo": "NV344",
+      "nombre": "METHYLCOBALAMIN B-12",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Vitaminas",
+      "subcategoria_id": 23,
+      "registro_invima": "SD2016-0003746",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 48,
+      "codigo": "NV290",
+      "nombre": "B-100 ADVANCED",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Vitaminas",
+      "subcategoria_id": 23,
+      "registro_invima": "SD2021-0001561-R1",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 49,
+      "codigo": "NV1942",
+      "nombre": "VITAMINA C",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Vitaminas",
+      "subcategoria_id": 23,
+      "registro_invima": "SD2015-0003704",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 50,
+      "codigo": "NV1874",
+      "nombre": "FEROL D3 2.000 UI",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Vitaminas",
+      "subcategoria_id": 23,
+      "registro_invima": "SD2015-0003523",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 51,
+      "codigo": "NV2134",
+      "nombre": "OSTIK2 (VITAMIN D3+K2)",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Vitaminas",
+      "subcategoria_id": 23,
+      "registro_invima": "SD2021-0004638",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 52,
+      "codigo": "NV1980",
+      "nombre": "RE-ACTIVIN",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Multivitamínicos",
+      "subcategoria_id": 24,
+      "registro_invima": "SD2016-0003778",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 53,
+      "codigo": "NV1680A",
+      "nombre": "GERIAFULL",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Multivitamínicos",
+      "subcategoria_id": 24,
+      "registro_invima": "SD2012-0002402",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 54,
+      "codigo": "NV1774",
+      "nombre": "TOTAL DAY",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Multivitamínicos",
+      "subcategoria_id": 24,
+      "registro_invima": "SD2013-0003012",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 55,
+      "codigo": "NV1678",
+      "nombre": "KIDDY MULTYVITAMIN",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Multivitamínicos",
+      "subcategoria_id": 24,
+      "registro_invima": "SD2013-0002962",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 56,
+      "codigo": "NV1674",
+      "nombre": "WOMEN´S COMPLETE",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Multivitamínicos",
+      "subcategoria_id": 24,
+      "registro_invima": "SD2012-0002667",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 57,
+      "codigo": "NV1700",
+      "nombre": "MEN´S MEGA MULTI",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Multivitamínicos",
+      "subcategoria_id": 24,
+      "registro_invima": "SD2013-0002695",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 58,
+      "codigo": "NV9976",
+      "nombre": "VEGAN PROTEIN",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Masa Muscular",
+      "subcategoria_id": 25,
+      "registro_invima": "RSA-001298-2016",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 59,
+      "codigo": "NV9929",
+      "nombre": "BUTY (HMB COMPLEX)",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Masa Muscular",
+      "subcategoria_id": 25,
+      "registro_invima": "SD2024-0004771",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    },
+    {
+      "id": 60,
+      "codigo": "NV9937",
+      "nombre": "DISFUTIL- L-ARGININE 1,000MG",
+      "categoria": "Suplementos dietarios",
+      "categoria_id": 1,
+      "subcategoria": "Masa Muscular",
+      "subcategoria_id": 25,
+      "registro_invima": "SD2017-0004098",
+      "precio": 0.0,
+      "observaciones": null,
+      "activo": true
+    }
+  ]
+}

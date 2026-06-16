@@ -134,6 +134,16 @@
       color: var(--c-gold);
     }
 
+    .nav-products {
+      position: relative;
+      padding: .3rem 0;
+      border-bottom: 1px solid rgba(181, 147, 90, .45);
+    }
+
+    .nav-products:hover {
+      border-color: var(--c-gold);
+    }
+
     .nav-cta {
       background: var(--c-gold) !important;
       color: var(--c-dark) !important;
@@ -1446,6 +1456,7 @@
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#tratamientos">Tratamientos</a></li>
       <li><a href="#proceso">Cómo Funciona</a></li>
+      <li><a href="productos.html" class="nav-products">Productos</a></li>
       <li><a href="#cta-final" class="nav-cta">Agendar Consulta</a></li>
     </ul>
     <div class="nav-hamburger" id="menuToggle" aria-label="Menú" aria-expanded="false">
@@ -1468,6 +1479,7 @@
     <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
     <a href="#tratamientos" onclick="closeMobileMenu()">Tratamientos</a>
     <a href="#proceso" onclick="closeMobileMenu()">Cómo Funciona</a>
+    <a href="productos.html" onclick="closeMobileMenu()">Productos</a>
     <a href="#cta-final" onclick="closeMobileMenu()" class="mob-cta">Agendar Consulta</a>
   </div>
 
