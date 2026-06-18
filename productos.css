@@ -445,13 +445,7 @@ nav#navbar.nav-hidden {
   margin-bottom: .75rem;
 }
 
-.producto-precio {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--p-green);
-  margin-bottom: .9rem;
-}
+.producto-precio { display: none; }
 
 .btn-whatsapp {
   display: inline-flex;

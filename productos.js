@@ -154,7 +154,6 @@
         <span class="badge">${producto.subcategoria}</span>
         <div class="producto-titulo">${producto.nombre.toUpperCase()}</div>
         <div class="producto-invima">${producto.registro_invima ? 'Reg. Invima: ' + producto.registro_invima : ''}</div>
-        <div class="producto-precio">${formatPrecio(producto.precio)}</div>
       `;
 
       const btnWa = document.createElement('a');
@@ -191,7 +190,7 @@
     modalBadge.textContent = producto.subcategoria;
     modalTitulo.textContent = producto.nombre.toUpperCase();
     modalInvima.textContent = producto.registro_invima ? 'Registro Sanitario Invima: ' + producto.registro_invima : '';
-    modalPrecio.textContent = formatPrecio(producto.precio);
+    modalPrecio.textContent = '';
     modalObs.textContent = producto.observaciones || '';
     modalBtnWa.href = whatsappUrl(producto);
 
