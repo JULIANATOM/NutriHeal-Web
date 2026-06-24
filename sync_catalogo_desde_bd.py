@@ -42,16 +42,29 @@ def exportar():
     cn = conectar(env)
     cur = cn.cursor()
 
-    cur.execute("SELECT id, nombre FROM nutriheal.categorias ORDER BY id")
-    categorias = [{"id": r.id, "nombre": r.nombre, "subcategorias": []} for r in cur.fetchall()]
+    cur.execute("SELECT id, nombre, marca_id FROM nutriheal.categorias ORDER BY id")
+    categorias = [{"id": r.id, "nombre": r.nombre, "marca_id": getattr(r, 'marca_id', None), "subcategorias": []} for r in cur.fetchall()]
     cat_by_id = {c["id"]: c for c in categorias}
 
     cur.execute("SELECT id, categoria_id, nombre FROM nutriheal.subcategorias ORDER BY id")
     for r in cur.fetchall():
         cat_by_id[r.categoria_id]["subcategorias"].append({"id": r.id, "nombre": r.nombre})
 
+    # Marcas
+    marcas = []
+    try:
+        cur.execute("SELECT id, nombre, blob_carpeta FROM nutriheal.marcas ORDER BY id")
+        marcas = [{"id": r.id, "nombre": r.nombre, "blob_carpeta": r.blob_carpeta} for r in cur.fetchall()]
+        marca_by_id = {m["id"]: m for m in marcas}
+        for c in categorias:
+            if c["marca_id"] and c["marca_id"] in marca_by_id:
+                c["marca"] = marca_by_id[c["marca_id"]]["nombre"]
+    except Exception:
+        marca_by_id = {}
+
     cur.execute("""
         SELECT p.id, p.codigo, p.nombre, p.registro_invima, p.precio, p.observaciones, p.activo,
+               p.marca_id,
                s.id AS subcategoria_id, s.nombre AS subcategoria,
                c.id AS categoria_id, c.nombre AS categoria
         FROM nutriheal.productos p
@@ -62,6 +75,8 @@ def exportar():
     """)
     productos = []
     for r in cur.fetchall():
+        marca_id  = getattr(r, 'marca_id', None)
+        marca_inf = marca_by_id.get(marca_id, {}) if marca_id else {}
         productos.append({
             "id": r.id,
             "codigo": r.codigo,
@@ -74,9 +89,12 @@ def exportar():
             "precio": float(r.precio) if r.precio is not None else 0.0,
             "observaciones": r.observaciones,
             "activo": bool(r.activo),
+            "marca_id": marca_id,
+            "marca": marca_inf.get("nombre", "NutriVita"),
+            "blob_carpeta": marca_inf.get("blob_carpeta", "NutriVita"),
         })
 
-    catalogo = {"categorias": categorias, "productos": productos}
+    catalogo = {"marcas": marcas, "categorias": categorias, "productos": productos}
     out_path = os.path.join(BASE_DIR, 'catalogo.json')
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(catalogo, f, ensure_ascii=False, indent=2)

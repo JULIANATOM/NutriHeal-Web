@@ -1,8 +1,37 @@
 {
+  "marcas": [
+    {
+      "id": 1,
+      "nombre": "NutriVita",
+      "blob_carpeta": "NutriVita"
+    },
+    {
+      "id": 2,
+      "nombre": "Nutra",
+      "blob_carpeta": "Nutra"
+    },
+    {
+      "id": 3,
+      "nombre": "GreenLab",
+      "blob_carpeta": "GreenLab"
+    },
+    {
+      "id": 4,
+      "nombre": "Boiron",
+      "blob_carpeta": "Boiron"
+    },
+    {
+      "id": 5,
+      "nombre": "Atopeel",
+      "blob_carpeta": "Atopel"
+    }
+  ],
   "categorias": [
     {
       "id": 1,
       "nombre": "Suplementos dietarios",
+      "marca_id": 1,
+      "marca": "NutriVita",
       "subcategorias": [
         {
           "id": 1,
@@ -89,6 +118,8 @@
     {
       "id": 2,
       "nombre": "Medicamentos",
+      "marca_id": 1,
+      "marca": "NutriVita",
       "subcategorias": [
         {
           "id": 8,
@@ -107,6 +138,8 @@
     {
       "id": 3,
       "nombre": "Fitoterapéuticos",
+      "marca_id": 1,
+      "marca": "NutriVita",
       "subcategorias": [
         {
           "id": 9,
@@ -115,6 +148,294 @@
         {
           "id": 12,
           "nombre": "Sistema Nervioso"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Suplementos Nutracéuticos",
+      "marca_id": 2,
+      "marca": "Nutra",
+      "subcategorias": [
+        {
+          "id": 26,
+          "nombre": "Salud Urinaria y Antioxidante"
+        },
+        {
+          "id": 27,
+          "nombre": "Sistema Inmunológico"
+        },
+        {
+          "id": 28,
+          "nombre": "Salud Capilar, Cutánea y Ungueal"
+        },
+        {
+          "id": 29,
+          "nombre": "Energía y Digestión"
+        },
+        {
+          "id": 30,
+          "nombre": "Salud Neurológica"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Suplementos Dietarios",
+      "marca_id": 2,
+      "marca": "Nutra",
+      "subcategorias": [
+        {
+          "id": 31,
+          "nombre": "Minerales – Salud Muscular y Nerviosa"
+        },
+        {
+          "id": 32,
+          "nombre": "Metabolismo – Control Glucémico"
+        },
+        {
+          "id": 33,
+          "nombre": "Salud Ósea"
+        },
+        {
+          "id": 34,
+          "nombre": "Salud Articular y de la Piel"
+        },
+        {
+          "id": 35,
+          "nombre": "Sistema Inmunológico"
+        },
+        {
+          "id": 36,
+          "nombre": "Minerales – Sistema Inmunológico"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Bebidas Funcionales",
+      "marca_id": 3,
+      "marca": "GreenLab",
+      "subcategorias": [
+        {
+          "id": 37,
+          "nombre": "Piel, Huesos y Articulaciones"
+        },
+        {
+          "id": 38,
+          "nombre": "Migraña y Energía"
+        },
+        {
+          "id": 39,
+          "nombre": "Salud Urinaria e Inmune"
+        },
+        {
+          "id": 40,
+          "nombre": "Digestivo y Detox"
+        },
+        {
+          "id": 41,
+          "nombre": "Huesos y Sistema Nervioso"
+        },
+        {
+          "id": 42,
+          "nombre": "Respiratorio (Tos y Flemas)"
+        },
+        {
+          "id": 43,
+          "nombre": "Nutrición Infantil (Hierro)"
+        },
+        {
+          "id": 44,
+          "nombre": "Energía y Apoyo Nutricional"
+        },
+        {
+          "id": 45,
+          "nombre": "Control de Peso y Glucosa"
+        },
+        {
+          "id": 46,
+          "nombre": "Hígado y Digestión"
+        },
+        {
+          "id": 47,
+          "nombre": "Ácido Úrico y Piel (Detox)"
+        },
+        {
+          "id": 48,
+          "nombre": "Antioxidante (Piel y Corazón)"
+        },
+        {
+          "id": 49,
+          "nombre": "Quema de Grasa y Detox"
+        },
+        {
+          "id": 50,
+          "nombre": "Antiparasitario y Digestivo"
+        },
+        {
+          "id": 51,
+          "nombre": "Salud Sexual Masculina"
+        },
+        {
+          "id": 52,
+          "nombre": "Articular y Antiinflamatorio"
+        },
+        {
+          "id": 53,
+          "nombre": "Articular y Óseo"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Alimento en Polvo",
+      "marca_id": 3,
+      "marca": "GreenLab",
+      "subcategorias": [
+        {
+          "id": 54,
+          "nombre": "Nutrición Infantil e Inmune"
+        },
+        {
+          "id": 55,
+          "nombre": "Energía y Proteína"
+        },
+        {
+          "id": 56,
+          "nombre": "Función Cerebral (B1)"
+        },
+        {
+          "id": 57,
+          "nombre": "Huesos e Inmune"
+        },
+        {
+          "id": 58,
+          "nombre": "Piel, Cabello y Articulaciones"
+        },
+        {
+          "id": 59,
+          "nombre": "Fibra (Colesterol y Glucosa)"
+        },
+        {
+          "id": 60,
+          "nombre": "Huesos (Calcio y Vit. D)"
+        },
+        {
+          "id": 61,
+          "nombre": "Inmune y Energía"
+        },
+        {
+          "id": 62,
+          "nombre": "Inmune y Antioxidante"
+        },
+        {
+          "id": 63,
+          "nombre": "Antioxidante (Piel y Corazón)"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Homeopáticos",
+      "marca_id": 3,
+      "marca": "GreenLab",
+      "subcategorias": [
+        {
+          "id": 64,
+          "nombre": "Estrés y Energía"
+        },
+        {
+          "id": 65,
+          "nombre": "Defensas / Inmune"
+        },
+        {
+          "id": 66,
+          "nombre": "Concentración y Enfoque"
+        },
+        {
+          "id": 67,
+          "nombre": "Bienestar y Alivio (Tópico)"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Medicamentos Homeopáticos (Boiron)",
+      "marca_id": 4,
+      "marca": "Boiron",
+      "subcategorias": [
+        {
+          "id": 68,
+          "nombre": "Anímicos"
+        },
+        {
+          "id": 69,
+          "nombre": "Circulatorios"
+        },
+        {
+          "id": 70,
+          "nombre": "Dermatológicos"
+        },
+        {
+          "id": 71,
+          "nombre": "Digestivos"
+        },
+        {
+          "id": 72,
+          "nombre": "Ginecológicos"
+        },
+        {
+          "id": 73,
+          "nombre": "Osteomusculares"
+        },
+        {
+          "id": 74,
+          "nombre": "Respiratorios"
+        },
+        {
+          "id": 75,
+          "nombre": "Urinarios"
+        },
+        {
+          "id": 76,
+          "nombre": "Otras Patologías"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "Dermocosméticos (Atopeel)",
+      "marca_id": 5,
+      "marca": "Atopeel",
+      "subcategorias": [
+        {
+          "id": 77,
+          "nombre": "Cuidado Facial / Barrera Cutánea"
+        },
+        {
+          "id": 78,
+          "nombre": "Hidratación Corporal"
+        },
+        {
+          "id": 79,
+          "nombre": "Limpieza Facial"
+        },
+        {
+          "id": 80,
+          "nombre": "Crema de Noche / Antiedad"
+        },
+        {
+          "id": 81,
+          "nombre": "Sérum Antiedad / Antioxidante"
+        },
+        {
+          "id": 82,
+          "nombre": "Protección Solar"
+        },
+        {
+          "id": 83,
+          "nombre": "Cuidado Labial"
         }
       ]
     }
@@ -131,7 +452,11 @@
       "registro_invima": "SD2021-0004596",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Gastrointestinal/NV9902.png"
     },
     {
       "id": 2,
@@ -144,7 +469,11 @@
       "registro_invima": "SD2015-0003438",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Gastrointestinal/NV1713.png"
     },
     {
       "id": 3,
@@ -157,7 +486,11 @@
       "registro_invima": "SD2023-0004692",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Probiotics/NV1073.png"
     },
     {
       "id": 4,
@@ -170,7 +503,11 @@
       "registro_invima": "SD2013-0002822",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Probiotics/NV1767.png"
     },
     {
       "id": 5,
@@ -183,7 +520,11 @@
       "registro_invima": "SD2012-0002604",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/D-Tox/NV468.png"
     },
     {
       "id": 6,
@@ -196,7 +537,11 @@
       "registro_invima": "SD2013-0003014",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/D-Tox/NV467.png"
     },
     {
       "id": 7,
@@ -209,7 +554,11 @@
       "registro_invima": "SD2013-0002888",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/D-Tox/NV1689.png"
     },
     {
       "id": 8,
@@ -222,7 +571,11 @@
       "registro_invima": "SD2013-0002935",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Hepático/NV1682.png"
     },
     {
       "id": 9,
@@ -235,7 +588,11 @@
       "registro_invima": "PFTI2021-0002815",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Hepático/NV1975.png"
     },
     {
       "id": 10,
@@ -248,7 +605,11 @@
       "registro_invima": "SD2013-0002984",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Cardiovascular/NV1671.png"
     },
     {
       "id": 11,
@@ -261,7 +622,11 @@
       "registro_invima": "SD2021-0004575",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Cardiovascular/NV458.png"
     },
     {
       "id": 12,
@@ -274,7 +639,11 @@
       "registro_invima": "SD2013-0002907",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Cardiovascular/NV1692.png"
     },
     {
       "id": 13,
@@ -287,7 +656,11 @@
       "registro_invima": "SD2020-0004508",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Cardiovascular/NV2124.png"
     },
     {
       "id": 14,
@@ -300,7 +673,11 @@
       "registro_invima": "SD2024-0004734",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Cardiovascular/NV1548.png"
     },
     {
       "id": 15,
@@ -313,7 +690,11 @@
       "registro_invima": "INVIMA 2015M-0016530",
       "precio": 0.0,
       "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Insuficiencia Venosa/NV1728.png"
     },
     {
       "id": 16,
@@ -326,7 +707,11 @@
       "registro_invima": "SD2015-0003597",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Articular/NV9949.png"
     },
     {
       "id": 17,
@@ -339,7 +724,11 @@
       "registro_invima": "INVIMA 2018M-0018048",
       "precio": 0.0,
       "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Medicamentos/Articular/NV1546A.png"
     },
     {
       "id": 18,
@@ -352,7 +741,11 @@
       "registro_invima": "PFM2012-0001934",
       "precio": 0.0,
       "observaciones": "* De venta libre. * No exceda su consumo. * Leer indicaciones, contraindicaciones y advertencias en la etiqueta. * Si los síntomas persisten, consultar al médico.",
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Fitoterapéuticos/Articular/NV1691.png"
     },
     {
       "id": 19,
@@ -365,7 +758,11 @@
       "registro_invima": "SD2013-0002758",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Sistema Inmunológico/NV1683.png"
     },
     {
       "id": 20,
@@ -378,7 +775,11 @@
       "registro_invima": "SD2016-0003776",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Sistema Inmunológico/NV2074.png"
     },
     {
       "id": 21,
@@ -391,7 +792,11 @@
       "registro_invima": "SD2015-0003460",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Sistema Inmunológico/NV1686.png"
     },
     {
       "id": 22,
@@ -404,7 +809,11 @@
       "registro_invima": "SD2013-0002970",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Metabolismo/NV1788.png"
     },
     {
       "id": 23,
@@ -417,7 +826,11 @@
       "registro_invima": "SD2012-0002630",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Metabolismo/NV1706.png"
     },
     {
       "id": 24,
@@ -430,7 +843,11 @@
       "registro_invima": "SD2015-0003690",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Metabolismo/NV1976.png"
     },
     {
       "id": 25,
@@ -443,7 +860,11 @@
       "registro_invima": "PFM2012-0001915",
       "precio": 0.0,
       "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Fitoterapéuticos/Sistema Nervioso/NV1684.png"
     },
     {
       "id": 26,
@@ -456,7 +877,11 @@
       "registro_invima": "SD2013-0002832",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Sistema Nervioso/NV1693.png"
     },
     {
       "id": 27,
@@ -469,7 +894,11 @@
       "registro_invima": "SD2013-0002889",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Sistema Nervioso/NV759.png"
     },
     {
       "id": 28,
@@ -482,7 +911,11 @@
       "registro_invima": "SD2014-0001864-R1",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Sistema Nervioso/NV835.png"
     },
     {
       "id": 29,
@@ -495,7 +928,11 @@
       "registro_invima": "INVIMA 2015M-0016375",
       "precio": 0.0,
       "observaciones": "* Venta con fórmula facultativa. * No exceda su consumo. * Leer indicaciones y contraindicaciones en la etiqueta. * Si los síntomas persisten, consultar al médico.",
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Medicamentos/Sistema Nervioso/NV1670.png"
     },
     {
       "id": 30,
@@ -508,7 +945,11 @@
       "registro_invima": "SD2013-0002847",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Urinario/NV1690.png"
     },
     {
       "id": 31,
@@ -521,7 +962,11 @@
       "registro_invima": "SD2015-0003680",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Urinario/NV1911.png"
     },
     {
       "id": 32,
@@ -534,7 +979,11 @@
       "registro_invima": "SD2013-0002992",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Urinario/NV1583.png"
     },
     {
       "id": 33,
@@ -547,7 +996,11 @@
       "registro_invima": "INVIMA 2016M-0016999",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Medicamentos/P-Natal/NV1904.png"
     },
     {
       "id": 34,
@@ -560,7 +1013,11 @@
       "registro_invima": "SD2015-0003712",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Visión/NV2046.png"
     },
     {
       "id": 35,
@@ -573,7 +1030,11 @@
       "registro_invima": "SD2013-0002901",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Endocrino/NV1685.png"
     },
     {
       "id": 36,
@@ -586,7 +1047,11 @@
       "registro_invima": "SD2014-0003324",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Endocrino/NV1981.png"
     },
     {
       "id": 37,
@@ -599,7 +1064,11 @@
       "registro_invima": "SD2013-0002864",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Endocrino/NV1688.png"
     },
     {
       "id": 38,
@@ -612,7 +1081,11 @@
       "registro_invima": "SD2015-0003674",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Antioxidantes/NV1886.png"
     },
     {
       "id": 39,
@@ -625,7 +1098,11 @@
       "registro_invima": "SD2021-0004601",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Antioxidantes/NV9901.png"
     },
     {
       "id": 40,
@@ -638,7 +1115,11 @@
       "registro_invima": "SD2015-0003659",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Dermatología/NV1982.png"
     },
     {
       "id": 41,
@@ -651,7 +1132,11 @@
       "registro_invima": "SD2018-0004167",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Figura/NV1992.png"
     },
     {
       "id": 42,
@@ -664,7 +1149,11 @@
       "registro_invima": "SD2011-0002155",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Minerales/NV1667.png"
     },
     {
       "id": 43,
@@ -677,7 +1166,11 @@
       "registro_invima": "SD2014-0003260",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Minerales/NV1795.png"
     },
     {
       "id": 44,
@@ -690,7 +1183,11 @@
       "registro_invima": "SD2025-0004968",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Minerales/NV1875.png"
     },
     {
       "id": 45,
@@ -703,7 +1200,11 @@
       "registro_invima": "SD2015-0003666",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Minerales/NV1876.png"
     },
     {
       "id": 46,
@@ -716,7 +1217,11 @@
       "registro_invima": "SD2025-0004956",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Vitaminas/NV197.png"
     },
     {
       "id": 47,
@@ -729,7 +1234,11 @@
       "registro_invima": "SD2016-0003746",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Vitaminas/NV344.png"
     },
     {
       "id": 48,
@@ -742,7 +1251,11 @@
       "registro_invima": "SD2021-0001561-R1",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Vitaminas/NV290.png"
     },
     {
       "id": 49,
@@ -755,7 +1268,11 @@
       "registro_invima": "SD2015-0003704",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Vitaminas/NV1942.png"
     },
     {
       "id": 50,
@@ -768,7 +1285,11 @@
       "registro_invima": "SD2015-0003523",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Vitaminas/NV1874.png"
     },
     {
       "id": 51,
@@ -781,7 +1302,11 @@
       "registro_invima": "SD2021-0004638",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Vitaminas/NV2134.png"
     },
     {
       "id": 52,
@@ -794,7 +1319,11 @@
       "registro_invima": "SD2016-0003778",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Multivitamínicos/NV1980.png"
     },
     {
       "id": 53,
@@ -807,7 +1336,11 @@
       "registro_invima": "SD2012-0002402",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Multivitamínicos/NV1680A.png"
     },
     {
       "id": 54,
@@ -820,7 +1353,11 @@
       "registro_invima": "SD2013-0003012",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Multivitamínicos/NV1774.png"
     },
     {
       "id": 55,
@@ -833,7 +1370,11 @@
       "registro_invima": "SD2013-0002962",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Multivitamínicos/NV1678.png"
     },
     {
       "id": 56,
@@ -846,7 +1387,11 @@
       "registro_invima": "SD2012-0002667",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Multivitamínicos/NV1674.png"
     },
     {
       "id": 57,
@@ -859,7 +1404,11 @@
       "registro_invima": "SD2013-0002695",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Multivitamínicos/NV1700.png"
     },
     {
       "id": 58,
@@ -872,7 +1421,11 @@
       "registro_invima": "RSA-001298-2016",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Masa Muscular/NV9976.png"
     },
     {
       "id": 59,
@@ -885,7 +1438,11 @@
       "registro_invima": "SD2024-0004771",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Masa Muscular/NV9929.png"
     },
     {
       "id": 60,
@@ -898,7 +1455,2272 @@
       "registro_invima": "SD2017-0004098",
       "precio": 0.0,
       "observaciones": null,
-      "activo": true
+      "activo": true,
+      "marca_id": 1,
+      "marca": "NutriVita",
+      "blob_carpeta": "NutriVita",
+      "imagen": "NutriVita/Suplementos dietarios/Masa Muscular/NV9937.png"
+    },
+    {
+      "id": 61,
+      "codigo": "1",
+      "nombre": "CRANNUTRA",
+      "categoria": "Suplementos Nutracéuticos",
+      "categoria_id": 4,
+      "subcategoria": "Salud Urinaria y Antioxidante",
+      "subcategoria_id": 26,
+      "registro_invima": "SD2024-0004748",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Refuerzo del sistema inmunológico. Protección antioxidante sistémica. Complemento en prevención y tratamiento de infecciones urinarias recurrentes. Apoyo funcional del tracto urinario.\n\nComposición: Vaccinum Vitis-Idaea (Arándano rojo europeo) 280 mg, Vitamina C 200 mg, Vitamina E natural (D-alfa tocoferol) 6 UI, Rose Hips 10 mg.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Salud Urinaria y Antioxidante/1.png"
+    },
+    {
+      "id": 62,
+      "codigo": "2",
+      "nombre": "IMMUNOL",
+      "categoria": "Suplementos Nutracéuticos",
+      "categoria_id": 4,
+      "subcategoria": "Sistema Inmunológico",
+      "subcategoria_id": 27,
+      "registro_invima": "SD2013-0002758",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Fortalecimiento del sistema inmunológico. Soporte en estrés físico, infecciones recurrentes y fatiga. Apoyo a la salud intestinal y de mucosas. Regulación de la respuesta inflamatoria.\n\nComposición: Maitake (Grifola frondosa) 50 mg, Shiitake (Lentinula edodes) 15 mg, Cordyceps sinensis 15 mg, Reishi (Ganoderma lucidum) 50 mg, Calostro bovino 200 mg.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Sistema Inmunológico/2.png"
+    },
+    {
+      "id": 63,
+      "codigo": "3",
+      "nombre": "KPILLUS",
+      "categoria": "Suplementos Nutracéuticos",
+      "categoria_id": 4,
+      "subcategoria": "Salud Capilar, Cutánea y Ungueal",
+      "subcategoria_id": 28,
+      "registro_invima": "SD2021-0004574",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Salud capilar, cutánea y ungueal. Integridad celular. Soporte metabólico (metabolismo de glucosa, oxidación de ácidos grasos y producción de energía celular - ATP). Indicado en cambios hormonales, estrés crónico, postparto y dietas restrictivas.\n\nComposición: Biotina (cofactor esencial).",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Salud Capilar, Cutánea y Ungueal/3.png"
+    },
+    {
+      "id": 64,
+      "codigo": "4",
+      "nombre": "VITA B",
+      "categoria": "Suplementos Nutracéuticos",
+      "categoria_id": 4,
+      "subcategoria": "Energía y Digestión",
+      "subcategoria_id": 29,
+      "registro_invima": "SD2011-0002163",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Mejora del rendimiento metabólico. Mejora la absorción proteica. Soporte digestivo en dispepsia leve. Ayuda a reducir la pesadez posprandial. Apoyo en fatiga física y mental.\n\nComposición: Vitaminas del complejo B + Papaína.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Energía y Digestión/4.png"
+    },
+    {
+      "id": 65,
+      "codigo": "5",
+      "nombre": "MECOBAL",
+      "categoria": "Suplementos Nutracéuticos",
+      "categoria_id": 4,
+      "subcategoria": "Salud Neurológica",
+      "subcategoria_id": 30,
+      "registro_invima": "SD2016-0003746",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Neuropatías periféricas y dolor neuropático. Apoyo en trastornos del estado de ánimo. Déficit funcional de vitamina B12. Fatiga crónica y bajo rendimiento cognitivo. Pacientes con alteraciones de metilación.\n\nComposición: Metilcobalamina (forma activa y biodisponible de vitamina B12; no requiere conversión hepática).",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Salud Neurológica/5.png"
+    },
+    {
+      "id": 66,
+      "codigo": "6",
+      "nombre": "NUTRAMAG",
+      "categoria": "Suplementos Dietarios",
+      "categoria_id": 5,
+      "subcategoria": "Minerales – Salud Muscular y Nerviosa",
+      "subcategoria_id": 31,
+      "registro_invima": "SD2015-0003666",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Apoyo a la función muscular y nerviosa, relajación y metabolismo energético.\n\nComposición: Magnesio 400 mg (formas aspartato, lactato y citrato). Suplemento dietario.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Minerales – Salud Muscular y Nerviosa/6.png"
+    },
+    {
+      "id": 67,
+      "codigo": "7",
+      "nombre": "CHROMONATE",
+      "categoria": "Suplementos Dietarios",
+      "categoria_id": 5,
+      "subcategoria": "Metabolismo – Control Glucémico",
+      "subcategoria_id": 32,
+      "registro_invima": "SD2012-0002630",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Apoyo al metabolismo de los carbohidratos y al control de los niveles de glucosa.\n\nComposición: Cromo (picolinato de cromo). Suplemento dietario. (Dosis en mcg no legible en el material; verificar en etiqueta.)",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Metabolismo – Control Glucémico/7.png"
+    },
+    {
+      "id": 68,
+      "codigo": "8",
+      "nombre": "SYNERVIT",
+      "categoria": "Suplementos Dietarios",
+      "categoria_id": 5,
+      "subcategoria": "Salud Ósea",
+      "subcategoria_id": 33,
+      "registro_invima": "SD2021-0004638",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Apoyo a la salud ósea y a la correcta fijación del calcio.\n\nComposición: Vitamina D3 + Vitamina K2. Suplemento dietario.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Salud Ósea/8.png"
+    },
+    {
+      "id": 69,
+      "codigo": "9",
+      "nombre": "NUTRAGEN",
+      "categoria": "Suplementos Dietarios",
+      "categoria_id": 5,
+      "subcategoria": "Salud Articular y de la Piel",
+      "subcategoria_id": 34,
+      "registro_invima": "SD2010-0001668",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Apoyo a la salud articular, de la piel y de los tejidos conectivos.\n\nComposición: Colágeno hidrolizado + Vitamina C. Suplemento dietario.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Salud Articular y de la Piel/9.png"
+    },
+    {
+      "id": 70,
+      "codigo": "10",
+      "nombre": "VITAMIN C 1000 + ZINC",
+      "categoria": "Suplementos Dietarios",
+      "categoria_id": 5,
+      "subcategoria": "Sistema Inmunológico",
+      "subcategoria_id": 35,
+      "registro_invima": "SD2019-0004482",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Soporte del sistema inmunológico y acción antioxidante.\n\nComposición: Vitamina C 1000 mg + Zinc. Suplemento dietario.",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Sistema Inmunológico/10.png"
+    },
+    {
+      "id": 71,
+      "codigo": "11",
+      "nombre": "NUTRAZINC",
+      "categoria": "Suplementos Dietarios",
+      "categoria_id": 5,
+      "subcategoria": "Minerales – Sistema Inmunológico",
+      "subcategoria_id": 36,
+      "registro_invima": "SD2011-000204",
+      "precio": 0.0,
+      "observaciones": "Beneficios: Soporte del sistema inmunológico y de la salud celular.\n\nComposición: Zinc 40 mg. Suplemento dietario. (Verificar número de registro completo en etiqueta.)",
+      "activo": true,
+      "marca": "Nutra",
+      "marca_id": 2,
+      "blob_carpeta": "Nutra",
+      "imagen": "Nutra/Suplementos Nutracéuticos/Minerales – Sistema Inmunológico/11.png"
+    },
+    {
+      "id": 72,
+      "codigo": "1",
+      "nombre": "COLAGM MAX",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Piel, Huesos y Articulaciones",
+      "subcategoria_id": 37,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Hidrata y mejora la elasticidad y la firmeza de la piel.\n* Retrasa el envejecimiento y previene las arrugas.\n* Contribuye a la salud de huesos y las articulaciones.\n* Fortalece las uñas y el cabello.\n\nBebida a base de agua con romero, uva, colágeno hidrolizado y resveratrol.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/1.png"
+    },
+    {
+      "id": 73,
+      "codigo": "2",
+      "nombre": "VTFRKANCE",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Migraña y Energía",
+      "subcategoria_id": 38,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ideal para la migraña y los fuertes dolores de cabeza.\n* Ayuda al sistema inmunológico.\n* Actúa eficazmente sobre el cansancio y agotamiento visual.\n* Reconstituyente del cerebro y de los glóbulos rojos.\n\nBebida a base de agua con canela y fresa.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/2.png"
+    },
+    {
+      "id": 74,
+      "codigo": "3",
+      "nombre": "CRANBERRY",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Salud Urinaria e Inmune",
+      "subcategoria_id": 39,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ideal para combatir infecciones urinarias.\n* Fortalece el sistema inmune.\n* Desintoxica el cuerpo contra organismos nocivos.\n* Reduce la incidencia de infecciones recurrentes del trato urinario.\n\nBebida con arándano, mora y uva.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/3.png"
+    },
+    {
+      "id": 75,
+      "codigo": "4",
+      "nombre": "GOLZAN",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Digestivo y Detox",
+      "subcategoria_id": 40,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Desinfla el intestino y elimina el exceso de gases.\n* Mejora el metabolismo gástrico.\n* Ayuda a mejorar el tránsito intestinal.\n* Ayuda a eliminar toxinas del colon e intestinos.\n\nBebida con concentrado de ciruela, concentrado de pitaya, concentrado de piña, fibra de manzana e inulina",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/4.png"
+    },
+    {
+      "id": 76,
+      "codigo": "5",
+      "nombre": "CITRATO DE MAGNESIO",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Huesos y Sistema Nervioso",
+      "subcategoria_id": 41,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Promueve la regeneración celular y previene la osteoporosis.\n* Ayuda a fijar el calcio en los huesos además de combatir y prevenir infecciones.\n* Actúa eficazmente sobre el cansancio y agotamiento visual.\n* Promueve el bienestar de los huesos, los músculos, el sistema nervioso y previene lesiones musculares.\n\nBebida a base de agua con alfalfa, mandarina, colágeno hidrolizado y cúrcuma.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/5.png"
+    },
+    {
+      "id": 77,
+      "codigo": "6",
+      "nombre": "TOMIMIEL",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Respiratorio (Tos y Flemas)",
+      "subcategoria_id": 42,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ayuda a expulsar la tos seca.\n* Ayuda a expulsar flemas.\n* Ayuda a descongestionar el pecho.\n\nMiel de abeja 100 % natural que ayuda a aliviar síntomas. Bebida con naranja, menta, limoncillo, cebolla y miel de abejas.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/6.png"
+    },
+    {
+      "id": 78,
+      "codigo": "7",
+      "nombre": "FERRIZTOM",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Nutrición Infantil (Hierro)",
+      "subcategoria_id": 43,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ayuda a fortalecer las defensas del organismo.\n* Ayuda a obtener energía.\n* Proporciona los nutrientes necesarios para el desarrollo físico y mental de los niños en su etapa de crecimiento.\n\nBebida con concentrado de guayaba y maní fortificada con hierro.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/7.png"
+    },
+    {
+      "id": 79,
+      "codigo": "8",
+      "nombre": "SOMIESUR",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Energía y Apoyo Nutricional",
+      "subcategoria_id": 44,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Mejora tu estado físico.\n* Ayuda al sistema inmunológico.\n* Apoyo nutricional para tu cuerpo.\n\nBebida con concentrado de fresa.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/8.png"
+    },
+    {
+      "id": 80,
+      "codigo": "9",
+      "nombre": "YACÓN",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Control de Peso y Glucosa",
+      "subcategoria_id": 45,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Favorece a las personas con resistencia a la insulina.\n* Apoya dietas de adelgazamiento.\n* Mejora el sistema inmune.\n* Protege las células del daño oxidativo.\n\nBebida a base de agua con fenogreco, ciruela, yacón y berenjena.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/9.png"
+    },
+    {
+      "id": 81,
+      "codigo": "10",
+      "nombre": "ALCACHOFA",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Hígado y Digestión",
+      "subcategoria_id": 46,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ayuda a digerir grasas y producción de bilis.\n* Protege el hígado favoreciendo las células hepáticas.\n* Favorece la eliminación de líquidos en el cuerpo.\n* Rica en antioxidantes.\n\nBebida a base de agua con clavo de olor, apio, alcachofa y cardamomo.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/10.png"
+    },
+    {
+      "id": 82,
+      "codigo": "11",
+      "nombre": "CHOLAGGE",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Ácido Úrico y Piel (Detox)",
+      "subcategoria_id": 47,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Favorece la eliminación del exceso de ácido úrico.\n* Alivia los dolores reumáticos y la gota.\n* Ayuda a combatir impurezas de la piel (acné, eczemas, forúnculos, urticarias y dermatosis).\n\nBebida a base de agua con espirulina, limón y espinaca.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/11.png"
+    },
+    {
+      "id": 83,
+      "codigo": "12",
+      "nombre": "RESVERATROL",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Antioxidante (Piel y Corazón)",
+      "subcategoria_id": 48,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Potente antioxidante que evita el envejecimiento celular.\n* Ayuda a proteger el corazón y la salud arterial.\n* Ayuda en la producción de colágeno.\n* Mejora el tono y brillo de la piel.\n\nBebida con concentrado de uva y colágeno hidrolizado fortificado con vitamina E.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/12.png"
+    },
+    {
+      "id": 84,
+      "codigo": "13",
+      "nombre": "DELGW",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Quema de Grasa y Detox",
+      "subcategoria_id": 49,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Excelente quemador de grasa.\n* Antiinflamatorio.\n* Regulador de los niveles de colesterol y triglicéridos.\n* Mejora la digestión.\n* Es auxiliar en el tratamiento del intestino perezoso.\n* Desinflamante del hígado.\n* Desintoxica la sangre.\n* Limpia las venas de la glucosa.\n\nBebida a base de agua con pimienta negra, limón, cúrcuma y jengibre.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/13.png"
+    },
+    {
+      "id": 85,
+      "codigo": "14",
+      "nombre": "PETIPON",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Antiparasitario y Digestivo",
+      "subcategoria_id": 50,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Apoya la eliminación de parásitos intestinales.\n* Ayuda a la limpieza del sistema digestivo.\n* Favorece una digestión más ligera.\n* Contribuye a reducir malestar abdominal.\n* Elaborado con ingredientes naturales.\n\nBebida con concentrado de pitaya, papaya y piña con ajo.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/14.png"
+    },
+    {
+      "id": 86,
+      "codigo": "15",
+      "nombre": "KING K - GOLDD",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Salud Sexual Masculina",
+      "subcategoria_id": 51,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Aumenta el deseo y la sensación de placer sexual.\n* Para deportistas de alto rendimiento.\n* Erecciones más fuertes y prolongadas.\n* Despierta la líbido y deseo sexual.\n* Elimina la frigidez y la astenia sexual.\n\nBebida con borojó, chontaduro y maca.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/15.png"
+    },
+    {
+      "id": 87,
+      "codigo": "16",
+      "nombre": "SIX-TOR",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Salud Sexual Masculina",
+      "subcategoria_id": 51,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Alarga y engrosa el pene en el momento de la relación.\n* Retrasa la eyaculación.\n* Mejora las erecciones, promoviendo el óxido nítrico.\n* Aumenta la irrigación de sangre al pene, excelente vasodilatador.\n\nBebida con concentrado de borojó, concentrado de chontaduro y maca, fortificado con vitamina B1.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/16.png"
+    },
+    {
+      "id": 88,
+      "codigo": "17",
+      "nombre": "FERME VIT F",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Salud Sexual Masculina",
+      "subcategoria_id": 51,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Favorece el aumento del tamaño y grosor del pene durante el encuentro sexual.\n* Ayuda a prolongar el tiempo antes de la eyaculación, mejorando el control.\n* Potencia la firmeza de las erecciones al estimular la producción de óxido nítrico.\n* Incrementa el flujo sanguíneo hacia el pene gracias a su potente efecto vasodilatador.\n\nAlimento líquido a base de agua endulzado con estevia, con pulpa de borojó y chontaduro deshidratados.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/17.png"
+    },
+    {
+      "id": 89,
+      "codigo": "18",
+      "nombre": "GREENCOLG",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Articular y Antiinflamatorio",
+      "subcategoria_id": 52,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Fortalece los huesos, las articulaciones y las uñas. Excelente antiinflamatorio.\n* Interviene en la reparación del tejido cartilaginoso.\n* Alivia los dolores producidos por la artritis, artrosis y dolores articulares.\n\nBebida con fresa, colágeno hidrolizado y cúrcuma.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/18.png"
+    },
+    {
+      "id": 90,
+      "codigo": "19",
+      "nombre": "GAF - PLUS",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Articular y Óseo",
+      "subcategoria_id": 53,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ayuda en dolores como: Fibromialgia, Hombros, Brazos, Cuello, Espalda, Manos y Pies, Rodillas, Artritis y Artrosis.\n\nBebida con fresa, colágeno hidrolizado y cúrcuma.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/19.png"
+    },
+    {
+      "id": 91,
+      "codigo": "20",
+      "nombre": "BIFANTIL",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Nutrición Infantil e Inmune",
+      "subcategoria_id": 54,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Refuerza el sistema inmunológico.\n* Previene enfermedades respiratorias.\n* Incrementa el crecimiento.\n* Regula el apetito.\n\nAlimento en polvo a base de avena con guayaba fortificado con vitamina C.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/20.png"
+    },
+    {
+      "id": 92,
+      "codigo": "21",
+      "nombre": "DEFENSE",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Energía y Proteína",
+      "subcategoria_id": 55,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Energía 100%.\n\nAlimento en polvo a base de avena con proteína concentrada de suero y colágeno hidrolizado fortificado con calcio.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/21.png"
+    },
+    {
+      "id": 93,
+      "codigo": "22",
+      "nombre": "VIT FRANS",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Función Cerebral (B1)",
+      "subcategoria_id": 56,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Fortalece las funciones del cerebro, actuando como un reconstituyente cerebral evitando la pérdida de memoria.\n\nAlimento en polvo a base de avena fortificado con B1.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/22.png"
+    },
+    {
+      "id": 94,
+      "codigo": "23",
+      "nombre": "COLÁGENO MARINO",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Huesos e Inmune",
+      "subcategoria_id": 57,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Buena condición física que debe complementarse con entrenamiento.\n* Mejor condición cognitiva.\n* Fortalecimiento del sistema óseo.\n* Refuerzo del sistema inmunológico.\n\nAlimento en polvo a base de avena con uva fortificado con vitamina D.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/23.png"
+    },
+    {
+      "id": 95,
+      "codigo": "24",
+      "nombre": "COL100PRO",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Piel, Cabello y Articulaciones",
+      "subcategoria_id": 58,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Actúa en la piel como antienvejecimiento.\n* Ayuda a fortalecer cabellos y uñas.\n* Tratamiento de colágeno para las articulaciones.\n* Fortifica los huesos.\n\nAlimento en polvo a base de avena con colágeno hidrolizado fortificado con vitamina E.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/24.png"
+    },
+    {
+      "id": 96,
+      "codigo": "25",
+      "nombre": "FIBRA MAX",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Fibra (Colesterol y Glucosa)",
+      "subcategoria_id": 59,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Reduce los niveles de colesterol y glucosa en la sangre.\n\nLinaza con psyllium, alcachofa en polvo, noni polvo, té verde, semillas de chía.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/25.png"
+    },
+    {
+      "id": 97,
+      "codigo": "26",
+      "nombre": "MULTICAL D",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Huesos (Calcio y Vit. D)",
+      "subcategoria_id": 60,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Previene la osteoporosis.\n* Protege dientes y huesos.\n\nAlimento en polvo a base de avena con sacha inchi fortificado con vitamina D.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/26.png"
+    },
+    {
+      "id": 98,
+      "codigo": "27",
+      "nombre": "CALOSTRO BOVINO PLUS",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Inmune y Energía",
+      "subcategoria_id": 61,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Ayuda al sistema inmune.\n* Aumenta energía.\n\nAlimento en polvo a base de avena con calostro bovino y colágeno hidrolizado fortificado con magnesio.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/27.png"
+    },
+    {
+      "id": 99,
+      "codigo": "28",
+      "nombre": "GANODERMA",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Inmune y Antioxidante",
+      "subcategoria_id": 62,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Es anticancerígeno y combate tumores, quistes y miomas.\n* Purifica y oxigena la sangre y neutraliza los radicales libres.\n* Fortalece el sistema inmune del cuerpo.\n\nAlimento en polvo a base de avena fortificado con vitamina B1, B2 y B6.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/28.png"
+    },
+    {
+      "id": 100,
+      "codigo": "29",
+      "nombre": "RESVERATROL",
+      "categoria": "Alimento en Polvo",
+      "categoria_id": 7,
+      "subcategoria": "Antioxidante (Piel y Corazón)",
+      "subcategoria_id": 63,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Potente antioxidante que evita el envejecimiento celular.\n* Ayuda a proteger el corazón y la salud arterial.\n* Ayuda en la producción de colágeno.\n* Mejora el tono y brillo de la piel.\n\nAlimento en polvo a base de avena con colágeno hidrolizado fortificado con vitamina E.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/29.png"
+    },
+    {
+      "id": 101,
+      "codigo": "30",
+      "nombre": "Ashwagandha",
+      "categoria": "Homeopáticos",
+      "categoria_id": 8,
+      "subcategoria": "Estrés y Energía",
+      "subcategoria_id": 64,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Equilibrio para tu ritmo de vida.\n* Ayuda a manejar el estrés diario, apoya la energía natural y fortalece el bienestar integral.\n* Vive con calma y enfoque.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/30.png"
+    },
+    {
+      "id": 102,
+      "codigo": "31",
+      "nombre": "Echinacea",
+      "categoria": "Homeopáticos",
+      "categoria_id": 8,
+      "subcategoria": "Defensas / Inmune",
+      "subcategoria_id": 65,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Defensas que florecen contigo.\n* Apoya el equilibrio natural del cuerpo y ayuda a fortalecer el sistema inmune día a día.\n* Tu aliado natural en cada temporada.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/31.png"
+    },
+    {
+      "id": 103,
+      "codigo": "32",
+      "nombre": "Melena de León",
+      "categoria": "Homeopáticos",
+      "categoria_id": 8,
+      "subcategoria": "Concentración y Enfoque",
+      "subcategoria_id": 66,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Claridad que se siente desde adentro.\n* Ayuda a fortalecer la concentración, apoya el enfoque mental y acompaña tu bienestar diario.\n* Conecta con tu mejor versión.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/32.png"
+    },
+    {
+      "id": 104,
+      "codigo": "33",
+      "nombre": "Cannabis Sativa (Uso Tópico)",
+      "categoria": "Homeopáticos",
+      "categoria_id": 8,
+      "subcategoria": "Bienestar y Alivio (Tópico)",
+      "subcategoria_id": 67,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Bienestar que se siente en la piel.\n* Ayuda a relajar el cuerpo, apoya la sensación de alivio y fortalece el equilibrio natural.\n* Naturaleza que acompaña tu día.\n\nCannabis Sativa · Uso Tópico.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/33.png"
+    },
+    {
+      "id": 105,
+      "codigo": "34",
+      "nombre": "RESVERATROL (Sachet)",
+      "categoria": "Bebidas Funcionales",
+      "categoria_id": 6,
+      "subcategoria": "Antioxidante (Piel y Corazón)",
+      "subcategoria_id": 48,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "* Potente antioxidante que evita el envejecimiento celular.\n* Ayuda a proteger el corazón y la salud arterial.\n* Ayuda en la producción de colágeno.\n* Mejora el tono y brillo de la piel.\n\nBebida con concentrado de uva y colágeno hidrolizado fortificado con vitamina E.",
+      "activo": true,
+      "marca": "GreenLab",
+      "marca_id": 3,
+      "blob_carpeta": "GreenLab",
+      "imagen": "GreenLab/34.png"
+    },
+    {
+      "id": 106,
+      "codigo": "1",
+      "nombre": "SEDATIF PC",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": "MH2018-0000704-R1",
+      "precio": 0.0,
+      "observaciones": "Indicación: Coadyuvante en el tratamiento de los estados nerviosos y trastorno del sueño.\nPosología: Disolver en la boca 2 comprimidos 3 veces al día\nComposición: Aconitum napellus 6 CH, Belladonna 6 CH, Caléndula officinalis 6 CH, Chelidonium majus 6 CH, Abrus precatorius 6 CH, Viburnum opulus 6 CH.\nPresentación: Comprimidos",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/1.png"
+    },
+    {
+      "id": 107,
+      "codigo": "2",
+      "nombre": "Argentum nitricum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Nerviosismo por anticipación, con precipitación y agitación. Diarrea emotiva.\nPosología: 5 gránulos 3 veces al día.\nComposición: Argentum nitricum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/2.png"
+    },
+    {
+      "id": 108,
+      "codigo": "3",
+      "nombre": "Gelsemium sempervirens 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Nerviosismo por anticipación, con precipitación y agitación. Diarrea emotiva.\nPosología: 5 gránulos la víspera, una hora antes y en el momento del acontecimiento.\nComposición: Gelsemium sempervirens 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/3.png"
+    },
+    {
+      "id": 109,
+      "codigo": "4",
+      "nombre": "Ignatia amara 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Ansiedad con espasmos. Comportamiento paradójico. Hipersensibilidad. Insomnio.\nPosología: 5 gránulos la víspera, una hora antes y en el momento del acontecimiento.\nComposición: Ignatia amara 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/4.png"
+    },
+    {
+      "id": 110,
+      "codigo": "5",
+      "nombre": "Acidum phosphoricum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Desánimo y agotamiento intelectual con apatía.\nPosología: 5 gránulos 2 o 3 veces al día.\nComposición: Acidum phosphoricum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/5.png"
+    },
+    {
+      "id": 111,
+      "codigo": "6",
+      "nombre": "Coffea cruda 15 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Insomnio por hiperactividad mental, afluencia continua de pensamientos, excitación intelectual. Insomnio tras recibir una buena noticia.\nPosología: 5 gránulos una hora antes de acostarse.\nComposición: Coffea cruda 15 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/6.png"
+    },
+    {
+      "id": 112,
+      "codigo": "7",
+      "nombre": "Kalium bromatum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Terrores nocturnos con agitación y ansiedad.\nPosología: 5 gránulos una hora antes de acostarse y 5 gránulos al acostarse.\nComposición: Kalium bromatum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/7.png"
+    },
+    {
+      "id": 113,
+      "codigo": "8",
+      "nombre": "Nux vomica 15 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Dificultad para dormir, insomnio por sobreactividad y estrés. Desvelo hacia las tres de la mañana.\nPosología: 5 gránulos por la noche.\nComposición: Nux vomica 15 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/8.png"
+    },
+    {
+      "id": 114,
+      "codigo": "9",
+      "nombre": "QUIETUDE",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": "MH2009-0001098",
+      "precio": 0.0,
+      "observaciones": "Indicación: Trastornos menores del sueño. Ansiedad pasajera en el niño. Hiperemotividad y estrés.\nPosología: Vía oral. Una cucharadita (5 ml) en la mañana y en la noche durante 10 días. Interrumpir al desaparecer los síntomas.\nComposición: Chamomilla vulgaris 9 CH, Hyoscyamus niger 9 CH, Kalium bromatum 9 CH, Passiflora incarnata 3 CH, Stramonium 9 CH.\nPresentación: Jarabe x 200 ml",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/9.png"
+    },
+    {
+      "id": 115,
+      "codigo": "10",
+      "nombre": "Stramonium 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Anímicos",
+      "subcategoria_id": 68,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Insomnio debido a terrores nocturnos con miedo a la oscuridad.\nPosología: 5 gránulos una hora antes de acostarse y 5 gránulos al acostarse.\nComposición: Stramonium 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/10.png"
+    },
+    {
+      "id": 116,
+      "codigo": "11",
+      "nombre": "Aesculus hippocastanum 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Circulatorios",
+      "subcategoria_id": 69,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Congestión venosa hemorroidal con sensación de pesadez. Hemorroides con prurito.\nPosología: 5 gránulos 4 veces al día.\nComposición: Aesculus hippocastanum 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/11.png"
+    },
+    {
+      "id": 117,
+      "codigo": "12",
+      "nombre": "Hamamelis virginiana 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Circulatorios",
+      "subcategoria_id": 69,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Congestión venosa agravada por los movimientos. Varices.\nPosología: 5 gránulos 2 veces al día.\nComposición: Hamamelis virginiana 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/12.png"
+    },
+    {
+      "id": 118,
+      "codigo": "13",
+      "nombre": "Pulsatilla 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Circulatorios",
+      "subcategoria_id": 69,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Piernas cansadas y dilatación venosa que empeora con el calor y la inmovilidad.\nPosología: 5 gránulos 2 veces al día.\nComposición: Pulsatilla 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/13.png"
+    },
+    {
+      "id": 119,
+      "codigo": "14",
+      "nombre": "Graphites 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Eczemas en pliegues y uniones cutáneo-mucosas, con secreciones de apariencia melosa que sangran. Cicatrices queloides.\nPosología: 5 gránulos 2 veces al día.\nComposición: Graphites 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/14.png"
+    },
+    {
+      "id": 120,
+      "codigo": "15",
+      "nombre": "Belladonna 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Quemaduras leves y de primer grado.\nPosología: 5 gránulos 3 veces al día.\nComposición: Belladonna 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/15.png"
+    },
+    {
+      "id": 121,
+      "codigo": "16",
+      "nombre": "Cantharis 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Quemaduras de segundo grado y ampollas ardientes en los pies (marcha, deporte).\nPosología: 5 gránulos 4 veces al día.\nComposición: Cantharis 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/16.png"
+    },
+    {
+      "id": 122,
+      "codigo": "17",
+      "nombre": "Apis mellifica 15 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Picaduras de insectos con edema y prurito, que se alivian con aplicaciones de agua fría.\nPosología: 5 gránulos 2 veces al día.\nComposición: Apis mellifica 15 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/17.png"
+    },
+    {
+      "id": 123,
+      "codigo": "18",
+      "nombre": "Ledum palustre 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Picaduras de insectos.\nPosología: 5 gránulos 4 veces al día.\nComposición: Ledum palustre 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/18.png"
+    },
+    {
+      "id": 124,
+      "codigo": "19",
+      "nombre": "Pulsatilla 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Eritema en las extremidades causado por el frío.\nPosología: 5 gránulos 3 veces al día.\nComposición: Pulsatilla 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/19.png"
+    },
+    {
+      "id": 125,
+      "codigo": "20",
+      "nombre": "Thuya occidentalis 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Tratamiento de fondo de las verrugas.\nPosología: 5 gránulos 1 vez al día.\nComposición: Thuya occidentalis 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/20.png"
+    },
+    {
+      "id": 126,
+      "codigo": "21",
+      "nombre": "Urtica urens 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Dermatológicos",
+      "subcategoria_id": 70,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Urticarias alérgicas o tóxicas con edema, que empeoran con el agua fría.\nPosología: 5 gránulos 3 veces al día.\nComposición: Urtica urens 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/21.png"
+    },
+    {
+      "id": 127,
+      "codigo": "22",
+      "nombre": "GASTROCYNESINE",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": "MH2009-0000984",
+      "precio": 0.0,
+      "observaciones": "Indicación: Acidez gástrica. Somnolencia después de las comidas. Reflujo gastroesofágico.\nPosología: Disolver en la boca 2 comprimidos 15 minutos antes de las comidas. Repetir si es necesario después de las comidas.\nComposición: Abies nigra 4 CH, Carbo vegetabilis 4 CH, Nux vomica 4 CH, Robinia pseudoacacia 4 CH.\nPresentación: Comprimidos",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/22.png"
+    },
+    {
+      "id": 128,
+      "codigo": "23",
+      "nombre": "Antimonium crudum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Indigestión, diarrea por excesos alimentarios. Lengua con capa blanca.\nPosología: 5 gránulos 3 veces al día.\nComposición: Antimonium crudum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/23.png"
+    },
+    {
+      "id": 129,
+      "codigo": "24",
+      "nombre": "Carbo vegetabilis 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Aerofagia, pesadez de estómago provocadas por el alcohol y los alimentos grasos.\nPosología: 5 gránulos 1 vez al día.\nComposición: Carbo vegetabilis 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/24.png"
+    },
+    {
+      "id": 130,
+      "codigo": "25",
+      "nombre": "Nux vomica 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Molestias digestivas por excesos alimentarios, de alcohol, café o tabaco. Pesadez gástrica.\nPosología: 5 gránulos 2 veces al día.\nComposición: Nux vomica 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/25.png"
+    },
+    {
+      "id": 131,
+      "codigo": "26",
+      "nombre": "China rubra 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Diarrea sin dolor, con agotamiento, por consumo excesivo de fruta.\nPosología: 5 gránulos 3 veces al día.\nComposición: China rubra 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/26.png"
+    },
+    {
+      "id": 132,
+      "codigo": "27",
+      "nombre": "Ignatia amara 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Colon irritable, espasmos intestinales.\nPosología: 5 gránulos 2 veces al día.\nComposición: Ignatia amara 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/27.png"
+    },
+    {
+      "id": 133,
+      "codigo": "28",
+      "nombre": "Podophyllum peltatum 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de diarrea profusa, fétida, matutina, de origen hepático.\nPosología: 5 gránulos 3 veces al día.\nComposición: Podophyllum peltatum 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/28.png"
+    },
+    {
+      "id": 134,
+      "codigo": "29",
+      "nombre": "Cina 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Digestivos",
+      "subcategoria_id": 71,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de cólicos abdominales debidos a vermes (Lombrices) con Nerviosismo, Insomnio.\nPosología: 5 gránulos 2 veces al día.\nComposición: Cina 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/29.png"
+    },
+    {
+      "id": 135,
+      "codigo": "30",
+      "nombre": "Ignatia amara 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de nauseas del embarazo por el olor de la comida o del tabaco y que se calman comiendo.\nPosología: 5 gránulos 2 veces al día.\nComposición: Ignatia amara 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/30.png"
+    },
+    {
+      "id": 136,
+      "codigo": "31",
+      "nombre": "Sepia oficinalis 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de nauseas matinales del embarazo, pensando o viendo alimentos.\nPosología: 5 gránulos 1 vez al día.\nComposición: Sepia oficinalis 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/31.png"
+    },
+    {
+      "id": 137,
+      "codigo": "32",
+      "nombre": "Apis mellifica 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de inflamación de los pechos durante la subida de leche. Se alterna con Bryonia 9 CH.\nPosología: 5 gránulos 2 veces al día.\nComposición: Apis mellifica 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/32.png"
+    },
+    {
+      "id": 138,
+      "codigo": "33",
+      "nombre": "Bryonia alba 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de inflamación dolorosa de las mamas durante la subida de leche, que empeora con el menor movimiento. Se alterna con Apis 9 CH.\nPosología: 5 gránulos 2 veces al día.\nComposición: Bryonia alba 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/33.png"
+    },
+    {
+      "id": 139,
+      "codigo": "34",
+      "nombre": "Gelsemium sempervirens 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en la preparación al parto. Rigidez cervical, dolor uterino. Anomalía de las contracciones con ansiedad.\nPosología: 5 gránulos 2 veces al día.\nComposición: Gelsemium sempervirens 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/34.png"
+    },
+    {
+      "id": 140,
+      "codigo": "35",
+      "nombre": "Caulophyllum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en la preparación al parto. Rigidez del cérvix (favorece la dilatación). Se aconseja alternarlo con Actaea.\nPosología: 5 gránulos cada 2 horas.\nComposición: Caulophyllum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/35.png"
+    },
+    {
+      "id": 141,
+      "codigo": "36",
+      "nombre": "Lachesis mutus 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de sofocos y modificaciones del humor en la perimenopausia. Cefalea congestiva y pulsátil.\nPosología: 5 gránulos 3 veces al día.\nComposición: Lachesis mutus 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/36.png"
+    },
+    {
+      "id": 142,
+      "codigo": "37",
+      "nombre": "Actaea racemosa 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de dismenorrea progresiva a lo largo de la regla, calambroidea con síndrome premenstrual.\nPosología: 5 gránulos 3 veces al día.\nComposición: Actaea racemosa 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/37.png"
+    },
+    {
+      "id": 143,
+      "codigo": "38",
+      "nombre": "Caulophyllum 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de dismenorrea del primer día, rigidez del cérvix.\nPosología: 5 gránulos 3 veces al día.\nComposición: Caulophyllum 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/38.png"
+    },
+    {
+      "id": 144,
+      "codigo": "39",
+      "nombre": "Colocynthis 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de dismenorrea espasmódica calambroidea que mejora con la presión y el calor, después de una contrariedad o de una emoción.\nPosología: 5 gránulos 4 veces al día.\nComposición: Colocynthis 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/39.png"
+    },
+    {
+      "id": 145,
+      "codigo": "40",
+      "nombre": "Folliculinum 15 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Ginecológicos",
+      "subcategoria_id": 72,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de síndrome premenstrual.\nPosología: 1 dosis los días 8 y 18 del ciclo.\nComposición: Folliculinum 15 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/40.png"
+    },
+    {
+      "id": 146,
+      "codigo": "41",
+      "nombre": "Cuprum metallicum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de calambres nocturnos (de las pantorrillas), de comienzo y final bruscos.\nPosología: 5 gránulos 2 veces al día.\nComposición: Cuprum metallicum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/41.png"
+    },
+    {
+      "id": 147,
+      "codigo": "42",
+      "nombre": "Kalium phosphoricum 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de cansancio físico e intelectual, agotamiento e insomnio.\nPosología: 5 gránulos 3 veces al día.\nComposición: Kalium phosphoricum 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/42.png"
+    },
+    {
+      "id": 148,
+      "codigo": "43",
+      "nombre": "OST",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Descalcificación, problemas del crecimiento. Consolidación de las fracturas. Convalecencia.\nPosología: 2 comprimidos 2 o 3 veces al día.\nComposición: Calcarea ostreica 3 DH, Calcarea fluorica 3 DH, Calcarea phosphorica 3 DH, Sulfuriodatum 4 CH.\nPresentación: Comprimidos",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/43.png"
+    },
+    {
+      "id": 149,
+      "codigo": "44",
+      "nombre": "Calcarea phosphorica 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de consolidación de las fracturas.\nPosología: 5 gránulos 3 veces al día.\nComposición: Calcarea phosphorica 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/44.png"
+    },
+    {
+      "id": 150,
+      "codigo": "45",
+      "nombre": "Silicea 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de desmineralización y descalcificación con gran sensibilidad al frío.\nPosología: 5 gránulos una vez al día.\nComposición: Silicea 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/45.png"
+    },
+    {
+      "id": 151,
+      "codigo": "46",
+      "nombre": "Apis mellifica 15 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de hinchazón de una articulación por acumulación de líquido acuoso, de instalación rápida con edema rojizo que mejora con el frío.\nPosología: En casos agudos, 5 gránulos cada 15 minutos, espaciando según mejoría; en casos subagudos 2 a 4 tomas al día.\nComposición: Apis mellifica 15 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/46.png"
+    },
+    {
+      "id": 152,
+      "codigo": "47",
+      "nombre": "Bryonia alba 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de dolores articulares que empeoran con el movimiento y mejoran con el reposo y las aplicaciones frías.\nPosología: 5 gránulos cada hora, espaciando según mejoría.\nComposición: Bryonia alba 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/47.png"
+    },
+    {
+      "id": 153,
+      "codigo": "48",
+      "nombre": "Rhus toxicodendron 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de dolores articulares, periarticulares, tendinosos y ligamentosos provocados por humedad y sobreesfuerzos, que mejoran con el movimiento progresivo y empeoran con el inicio del movimiento y el reposo.\nPosología: 5 gránulos 3 veces al día.\nComposición: Rhus toxicodendron 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/48.png"
+    },
+    {
+      "id": 154,
+      "codigo": "49",
+      "nombre": "Ruta graveolens 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de esguinces y luxaciones.\nPosología: 5 gránulos 3 veces al día.\nComposición: Ruta graveolens 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/49.png"
+    },
+    {
+      "id": 155,
+      "codigo": "50",
+      "nombre": "Arnica montana 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de contusiones y traumatismos de todo tipo y tejido. Cansancio muscular. Daños capilares y venosos.\nPosología: 5 gránulos 3 veces al día.\nComposición: Arnica montana 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/50.png"
+    },
+    {
+      "id": 156,
+      "codigo": "51",
+      "nombre": "Ledum palustre 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de equimosis por traumatismo (ojo negro…).\nPosología: 5 gránulos 4 veces al día.\nComposición: Ledum palustre 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/51.png"
+    },
+    {
+      "id": 157,
+      "codigo": "52",
+      "nombre": "Symphytum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Osteomusculares",
+      "subcategoria_id": 73,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado para la consolidación de fracturas y episodios dolorosos del hueso y periostio.\nPosología: 5 gránulos 4 veces al día.\nComposición: Symphytum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/52.png"
+    },
+    {
+      "id": 158,
+      "codigo": "53",
+      "nombre": "Belladonna 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de anginas agudas, con inflamación de color rojo intenso, de aparición brusca y con abatimiento.\nPosología: 5 gránulos 4 veces al día.\nComposición: Belladonna 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/53.png"
+    },
+    {
+      "id": 159,
+      "codigo": "54",
+      "nombre": "OSCILLOCOCCINUM",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": "MH2019-0000697-R1",
+      "precio": 0.0,
+      "observaciones": "Indicación: Tratamiento preventivo y curativo de la gripe y de los estados gripales: escalofríos, fiebre, dolor de cabeza.\nPosología: Preventivo: una dosis a la semana de octubre a febrero. Inicio: una dosis en cuanto aparezcan los primeros síntomas, repetir cada 6 horas 2 o 3 veces. Estados declarados: una dosis por la mañana y otra por la noche durante 3 días.\nComposición: Anas barbariae hepatis et cordis extractum 200 K.\nPresentación: Dosis de glóbulos",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/54.png"
+    },
+    {
+      "id": 160,
+      "codigo": "55",
+      "nombre": "Aconitum napellus 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de fiebre alta de aparición brusca sin transpiración.\nPosología: 5 gránulos 2 a 4 veces al día.\nComposición: Aconitum napellus 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/55.png"
+    },
+    {
+      "id": 161,
+      "codigo": "56",
+      "nombre": "Belladonna 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de fiebre alta de aparición brusca, a veces oscilante, con sudores profusos, cefalea pulsátil.\nPosología: 5 gránulos 2 a 4 veces al día.\nComposición: Belladonna 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/56.png"
+    },
+    {
+      "id": 162,
+      "codigo": "57",
+      "nombre": "Gelsemium sempervirens 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en casos de fiebre en meseta, sin sed, con escalofríos, temblores, dolores musculares y postración.\nPosología: 5 gránulos 2 a 4 veces al día.\nComposición: Gelsemium sempervirens 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/57.png"
+    },
+    {
+      "id": 163,
+      "codigo": "58",
+      "nombre": "COR",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Catarros con predominio de estornudos y rinorrea. Rinitis. Rinitis alérgicas.\nPosología: Disolver en la boca 1 comprimido cada hora; espaciar las tomas según mejoría.\nComposición: Allium cepa 5 CH, Belladonna 5 CH, Sabadilla 5 CH, Kalium bichromicum 5 CH, Gelsemium sempervirens 5 CH.\nPresentación: Comprimidos",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/58.png"
+    },
+    {
+      "id": 164,
+      "codigo": "59",
+      "nombre": "Allium cepa 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de catarro con rinorrea irritante y lagrimeo no irritante.\nPosología: 5 gránulos cada 2 horas, espaciando según mejoría.\nComposición: Allium cepa 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/59.png"
+    },
+    {
+      "id": 165,
+      "codigo": "60",
+      "nombre": "Kalium bichromicum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de rinitis que cursa con dolor y presión en la raíz nasal. Moco espeso, viscoso, amarillo o amarillo verdoso; a veces sanguinolento, pegajoso, que puede formar costras en las fosas nasales.\nPosología: 5 gránulos 3 veces al día.\nComposición: Kalium bichromicum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/60.png"
+    },
+    {
+      "id": 166,
+      "codigo": "61",
+      "nombre": "Kalium sulfuricum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de rinitis. Inflamación de las vías respiratorias superiores con rinorrea amarillenta o amarillo verdosa que empeora con el calor.\nPosología: 5 gránulos 3 veces al día.\nComposición: Kalium sulfuricum 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/61.png"
+    },
+    {
+      "id": 167,
+      "codigo": "62",
+      "nombre": "Kalium bichromicum 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de sinusitis maxilar y frontal que empeora con el frío, con moco espeso, viscoso y amarillo verdoso.\nPosología: 5 gránulos 3 veces al día.\nComposición: Kalium bichromicum 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/62.png"
+    },
+    {
+      "id": 168,
+      "codigo": "63",
+      "nombre": "STODALINE (Jarabe)",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": "MH2020-0002728",
+      "precio": 0.0,
+      "observaciones": "Indicación: Tratamiento sintomático de la tos seca y productiva.\nPosología: Adultos: 15 ml de 3 a 5 veces al día. Niños: 5 ml de 3 a 5 veces al día. Espaciar según mejoría.\nComposición: Antimonium tartaricum 6 CH, Bryonia 3 CH, Coccus cacti 4 CH, Drosera 3 CH, Ipeca 3 CH, Rumex crispus 6 CH, Spongia tosta 4 CH, Sticta pulmonaria 3 CH.\nPresentación: Jarabe x 200 ml.",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/63.png"
+    },
+    {
+      "id": 169,
+      "codigo": "64",
+      "nombre": "Antimonium tartaricum 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de inflamación de las vías respiratorias superiores con expectoración difícil.\nPosología: 5 gránulos cada 2 horas, espaciando según mejoría.\nComposición: Antimonium tartaricum 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/64.png"
+    },
+    {
+      "id": 170,
+      "codigo": "65",
+      "nombre": "Drosera 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de tos quintosa espasmódica, por la noche y con el calor.\nPosología: 5 gránulos después de cada quinta de tos.\nComposición: Drosera 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/65.png"
+    },
+    {
+      "id": 171,
+      "codigo": "66",
+      "nombre": "Rumex crispus 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de tos seca al respirar aire frío.\nPosología: 5 gránulos cada 2 horas.\nComposición: Rumex crispus 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/66.png"
+    },
+    {
+      "id": 172,
+      "codigo": "67",
+      "nombre": "Sambucus nigra 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de tos asmática, tos espasmódica y disnea asmática nocturna.\nPosología: 5 gránulos cada 10 minutos hasta mejoría.\nComposición: Sambucus nigra 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/67.png"
+    },
+    {
+      "id": 173,
+      "codigo": "68",
+      "nombre": "Spongia tosta 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Respiratorios",
+      "subcategoria_id": 74,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de tos asmática, tos espasmódica e inflamación de las cuerdas vocales.\nPosología: 5 gránulos después de cada quinta de tos.\nComposición: Spongia tosta 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/68.png"
+    },
+    {
+      "id": 174,
+      "codigo": "69",
+      "nombre": "Cantharis vesicatoria 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Urinarios",
+      "subcategoria_id": 75,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Utilizado en caso de infección urinaria aguda con dolor antes y durante la micción.\nPosología: 5 gránulos 4 veces al día.\nComposición: Cantharis vesicatoria 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/69.png"
+    },
+    {
+      "id": 175,
+      "codigo": "70",
+      "nombre": "Borax 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Utilizado en caso de aftas en la parte interna de la mejilla con líquido opaco.\nPosología: 5 gránulos 3 veces al día.\nComposición: Borax 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/70.png"
+    },
+    {
+      "id": 176,
+      "codigo": "71",
+      "nombre": "Cocculus indicus 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de mareo en vehículos que mejora con el calor o cerrando las ventanillas.\nPosología: 5 gránulos una hora antes de la salida y repetir al inicio del viaje; repetir según necesidad.\nComposición: Cocculus indicus 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/71.png"
+    },
+    {
+      "id": 177,
+      "codigo": "72",
+      "nombre": "Euphrasia oficinalis 5 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de conjuntivitis con lagrimeo irritante y coriza no irritante. Inflamación de los párpados.\nPosología: 5 gránulos cada 2 horas, espaciando según mejoría.\nComposición: Euphrasia oficinalis 5 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/72.png"
+    },
+    {
+      "id": 178,
+      "codigo": "73",
+      "nombre": "Chamomilla vulgaris 15 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de dolor, irritabilidad y diarrea debidas a la dentición.\nPosología: 5 gránulos cada 15 minutos, espaciando según mejoría. Disolver en el biberón o en un poco de agua.\nComposición: Chamomilla vulgaris 15 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/73.png"
+    },
+    {
+      "id": 179,
+      "codigo": "74",
+      "nombre": "China rubra 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado como adyuvante en caso de hemorragias y anemia hiposiderémica.\nPosología: 5 gránulos 3 veces al día.\nComposición: China rubra 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/74.png"
+    },
+    {
+      "id": 180,
+      "codigo": "75",
+      "nombre": "Phosphorus 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado como adyuvante en caso de hemorragias abundantes y repetidas en las diferentes mucosas y en heridas.\nPosología: 5 gránulos cada 6 horas.\nComposición: Phosphorus 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/75.png"
+    },
+    {
+      "id": 181,
+      "codigo": "76",
+      "nombre": "Belladonna 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de insolación. Cefaleas congestivas pulsátiles. Enrojecimiento de la cara con sudores.\nPosología: 5 gránulos 3 veces al día.\nComposición: Belladonna 9 CH.\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/76.png"
+    },
+    {
+      "id": 182,
+      "codigo": "77",
+      "nombre": "Argentum nitricum 30 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de miedo por anticipación con agitación y precipitación, con diarrea emotiva. Insomnio.\nPosología: Una dosis la víspera por la tarde y otra dosis una hora antes de la intervención.\nComposición: Argentum nitricum 30 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/77.png"
+    },
+    {
+      "id": 183,
+      "codigo": "78",
+      "nombre": "Gelsemium sempervirens 30 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de miedo por anticipación a una intervención.\nPosología: Una dosis la víspera por la tarde y otra dosis una hora antes de la intervención.\nComposición: Gelsemium sempervirens 30 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/78.png"
+    },
+    {
+      "id": 184,
+      "codigo": "79",
+      "nombre": "Arnica montana 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en cuidados postoperatorios para reducir el dolor y la inflamación.\nPosología: 5 gránulos cada hora, espaciando según mejoría.\nComposición: Arnica montana 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/79.png"
+    },
+    {
+      "id": 185,
+      "codigo": "80",
+      "nombre": "China rubra 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado en caso de adinamia de las convalecencias.\nPosología: 5 gránulos 2 veces al día.\nComposición: China rubra 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/80.png"
+    },
+    {
+      "id": 186,
+      "codigo": "81",
+      "nombre": "Staphysagria 9 CH",
+      "categoria": "Medicamentos Homeopáticos (Boiron)",
+      "categoria_id": 9,
+      "subcategoria": "Otras Patologías",
+      "subcategoria_id": 76,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Indicación: Frecuentemente utilizado para aliviar los dolores postoperatorios (heridas quirúrgicas, incisiones, entre otros).\nPosología: 5 gránulos 2 veces al día.\nComposición: Staphysagria 9 CH\nPresentación: Gránulos: tubo de 4g",
+      "activo": true,
+      "marca": "Boiron",
+      "marca_id": 4,
+      "blob_carpeta": "Boiron",
+      "imagen": "Boiron/81.png"
+    },
+    {
+      "id": 187,
+      "codigo": "1",
+      "nombre": "Atopeel Crema",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Cuidado Facial / Barrera Cutánea",
+      "subcategoria_id": 77,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Contiene 21 ingredientes de origen natural con potente acción restauradora y protectora de la barrera cutánea. Ayuda a restaurar, proteger y restablecer la función de barrera de la piel. Protege las células de la deshidratación reduciendo la pérdida transepidérmica de agua (TEWL) y previene que los alérgenos penetren en la piel. Apta para bebés, niños y adultos.\n\nIngredientes activos: Ectoína (post-biótico humectante), Crema lamelar (con Escualeno y Ceramida 3) y Extracto de corteza de avellana.",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/1.webp"
+    },
+    {
+      "id": 188,
+      "codigo": "2",
+      "nombre": "Atopeel Body",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Hidratación Corporal",
+      "subcategoria_id": 78,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Crema corporal hidratante y emoliente que contiene 29 ingredientes de origen natural, ofreciendo hidratación y cuidado diario de pieles secas y sensibles. Protege la barrera cutánea. Humecta, mejora la suavidad y aumenta la elasticidad de la piel en más de 90%. Apta para bebés, niños y adultos. Dermatológicamente probado, no comedogénico.\n\nIngredientes activos: Aceite de grosella negra (antioxidante), Manteca de karité (hidratante), Aceite de coco (antioxidante), Extracto de vainilla (antioxidante y calmante), Extracto de hoja de romero (protector antienvejecimiento, antioxidante) y Aceite de girasol (antioxidante).",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/2.webp"
+    },
+    {
+      "id": 189,
+      "codigo": "3",
+      "nombre": "Atopeel Agua Micelar 5 en 1",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Limpieza Facial",
+      "subcategoria_id": 79,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Limpieza profunda y suave para mantener la barrera cutánea. Acción 5 en 1: desmaquilla, hidrata, matifica, limpia y tonifica el rostro. Elimina la polución. 0% alcohol y 0% jabón. Apta para rostro, labios y ojos. Dermatológica y oftalmológicamente testeada. 98% ingredientes de origen natural (100% origen vegano).\n\nIngredientes activos: NatraGem S (micelas que limpian sin irritar el rostro, labios y ojos) y Trehalose 100 (ingrediente de última generación que mejora la función de la barrera cutánea promoviendo la formación de estructuras lamelares, humecta disminuyendo la pérdida transepidérmica de agua —TEWL— en el estrato córneo y reduce los niveles de Interleuquina 1).",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/3.jpg"
+    },
+    {
+      "id": 190,
+      "codigo": "4",
+      "nombre": "Atopeel-N Crema Noche",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Crema de Noche / Antiedad",
+      "subcategoria_id": 80,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Crema facial antiedad de fórmula multicomponente con 6 ingredientes de origen natural que proporcionan reparación epidérmica y regulan la melanogénesis. Antienvejecimiento, efecto reparador, humectante, antioxidante, antiglicante y despigmentante. Reduce un 40% la producción de melanina, estimula el metabolismo celular del colágeno y aumenta la resistencia de la membrana celular frente a los radicales libres. Dermatológicamente probado, no comedogénico. 92% ingredientes de origen natural.\n\nIngredientes activos: Ácido hialurónico de origen vegetal (hidrata en 3 niveles), Vitamina C 10%, Retinol 0,5% (reduce líneas finas; mejora biodisponibilidad, estabilidad y eficiencia del colágeno), Niacinamida 2% (disminuye la permeabilidad vascular; aumenta la producción de colágeno I, III y V; despigmentante), Ascorbosilane C (antioxidante y reductor de manchas), Silicio (potencia penetración, estabilidad y biodisponibilidad de la vitamina C), Vitamina E 1% (antioxidante) y Ormagel SH (hidratante; aumenta la tolerabilidad de los demás componentes).",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/4.jpg"
+    },
+    {
+      "id": 191,
+      "codigo": "5",
+      "nombre": "Atopeel C Professional Serum",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Sérum Antiedad / Antioxidante",
+      "subcategoria_id": 81,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Sérum facial antioxidante de triple acción —hidratante, antioxidante y antiedad— para un resplandor natural. Fórmula innovadora a base de algas marinas que hidratan y proporcionan firmeza incluso en pieles sensibles. Reduce un 40% la producción de melanina, estimula el metabolismo celular del colágeno, reduce la pérdida transepidérmica de agua, mejora la elasticidad y disminuye las arrugas. Para todo tipo de piel. 90% ingredientes de origen natural.\n\nIngredientes activos: Vitamina C 10% + Ácido hialurónico 10%. Ascorbosilane C (vitamina C al 10% combinada con Silicio para mejorar penetración, estabilidad y biodisponibilidad), Ácido hialurónico vegano de 3 pesos moleculares (hidrata dermis y epidermis en múltiples niveles) y algas marinas rojas y marrones (aumentan la humectación, suavidad y elasticidad).",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/5.webp"
+    },
+    {
+      "id": 192,
+      "codigo": "6",
+      "nombre": "Atopeel S Ultraprotect Sun",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Protección Solar",
+      "subcategoria_id": 82,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Protector solar de amplio espectro SPF 50+ (UVA, UVB, IR y luz visible). Activa la protección de la piel, restaura el daño previamente ocasionado e hidrata: protege, previene, repara e hidrata. Fotoprotección de espectro total con Repair Complex. Reduce un 74% el daño cutáneo por luz visible y radiación infrarroja. Textura ligera de rápida absorción, con toque ultraseco y efecto matificante; para uso en el rostro y piel mixta a grasa. Dermatológicamente probado, no comedogénico. Disponible en 3 tonos: sin color, claro y oscuro.\n\nIngredientes activos: Combinación de algas rojas y marrones (hidratan y mejoran la tolerabilidad de los demás componentes) y Ácido hialurónico de origen vegano (0,5%) con moléculas de bajo, medio y alto peso molecular. Ingredientes de origen natural.",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/6.webp"
+    },
+    {
+      "id": 193,
+      "codigo": "7",
+      "nombre": "Atopeel Bálsamo Lip Protect",
+      "categoria": "Dermocosméticos (Atopeel)",
+      "categoria_id": 10,
+      "subcategoria": "Cuidado Labial",
+      "subcategoria_id": 83,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Beneficios: Bálsamo labial que humecta, repara y protege los labios frente a diferentes condiciones climáticas. Genera cuatro beneficios para labios sensibles y resecos: emoliente e hidratante, reparador y protector, antioxidante y calmante. Con activos vegetales emolientes, reparadores y protectores que reducen la irritación e inflamación de la piel. 93% ingredientes de origen natural. Disponible en 2 sabores: vainilla y menta.\n\nIngredientes activos: Aceite de jojoba (10%), Fitocomplejo (5%) con ésteres de jojoba, girasol, karité y mimosa; Caléndula y Vitamina E natural (0,5%).",
+      "activo": true,
+      "marca": "Atopeel",
+      "marca_id": 5,
+      "blob_carpeta": "Atopel",
+      "imagen": "Atopel/7.webp"
     }
   ]
 }

@@ -248,6 +248,60 @@ nav#navbar.nav-hidden {
   .filtros { position: static; }
 }
 
+/* ── Filtro de marcas ── */
+.marca-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding-bottom: 1rem;
+  margin-bottom: .75rem;
+  border-bottom: 1px solid var(--p-border);
+}
+
+.marca-pill {
+  background: rgba(13, 92, 58, .06);
+  border: 1px solid var(--p-border);
+  border-radius: 20px;
+  padding: .3rem .75rem;
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--p-muted);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.marca-pill:hover {
+  background: rgba(13, 92, 58, .12);
+  color: var(--p-green);
+  border-color: var(--p-green);
+}
+
+.marca-pill.active {
+  background: var(--p-green);
+  color: #fff;
+  border-color: var(--p-green);
+}
+
+/* Etiqueta de marca en el acordeón (modo Todas) */
+.cat-marca {
+  font-size: .72rem;
+  font-weight: 400;
+  color: var(--p-gold);
+  margin-left: .35rem;
+  font-style: normal;
+}
+
+/* Etiqueta de marca en tarjeta de producto */
+.producto-marca-tag {
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--p-gold);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-top: .2rem;
+}
+
 .filtros-head {
   display: flex;
   align-items: center;
