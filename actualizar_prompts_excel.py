@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Actualiza el archivo de auditoria NutriHeal 360:
-1. Reemplaza los prompts de imagen (columna 9) con la plantilla validada
-   en nano banana / FLUX.2 Pro que preserva el producto real.
+1. Reemplaza los prompts de imagen (columna 9) con la plantilla optimizada
+   para ElevenLabs Image que preserva el producto real.
 2. Agrega dos columnas nuevas con hipervínculos a las imágenes de referencia
    que el operador debe subir al generador de imágenes:
       - Col 13: Imagen Producto (Ref. 1) → URL Azure Blob
@@ -46,56 +46,245 @@ def blob_url_producto(nombre):
     if key not in CATALOG_MAP:
         return None
     p = CATALOG_MAP[key]
-    cat = urllib.parse.quote(p['categoria'])
-    sub = urllib.parse.quote(p['subcategoria'])
+    # Usar campo imagen exacto si existe (multi-marca, extensión correcta)
+    if p.get('imagen'):
+        return BLOB_BASE + '/'.join(urllib.parse.quote(seg) for seg in p['imagen'].split('/'))
+    # Fallback legacy (solo NutriVita, estructura jerárquica)
+    cat    = urllib.parse.quote(p['categoria'])
+    sub    = urllib.parse.quote(p['subcategoria'])
     codigo = p['codigo']
     return f'{BLOB_BASE}{cat}/{sub}/{codigo}.png'
 
 # ── Plantillas de prompts ────────────────────────────────────────────────────
 SUPLEMENTACION_TEMPLATE = (
-    'Keep the supplement bottle labeled {product} exactly as shown in the reference image — '
-    'do not modify, redesign, recreate, or alter its label, text, shape, color, or branding '
-    'in any way. Generate only a new background and environment around the unchanged product: '
-    'dark marble surface, soft emerald green (#1B7A4A) ambient glow and lighting, '
-    'gold (#C9A84C) accent details in the scene, scattered fresh herbs and botanical elements '
-    'like ginger and citrus slices around the bottle, professional studio photography lighting, '
-    'shallow depth of field, luxury wellness brand aesthetic. '
-    'Place the NutriHeal 360 logo from the second reference image in the bottom-right corner '
-    'of the composition exactly as it appears in that reference — do not recolor, redesign, '
-    'modify, or alter any element of the logo in any way (not the colors, not the typography, '
-    'not the icon, not the proportions). Use it as a fixed, pixel-accurate brand watermark, '
-    'clearly outside the product and not overlapping or touching the bottle itself.'
+    # ── SUBJECT (reference-locked) ──────────────────────────────────────────
+    'Photorealistic luxury product photograph. '
+    'SUBJECT: the supplement bottle labeled "{product}" as shown in Reference Image 1 — '
+    'reproduce its label artwork, color palette, typography, capsule/bottle shape, cap design, '
+    'and all branding elements with 100% pixel fidelity. '
+    'Do NOT alter, redesign, recolor, or reimagine the label in any way. '
+    # ── SURFACE & BACKGROUND ────────────────────────────────────────────────
+    'SURFACE: polished deep-black Marquina marble with fine white veining, '
+    'photographed straight-on at a slight 10° downward camera tilt. '
+    'BACKGROUND: smooth dark charcoal-to-black gradient bokeh, '
+    'with a diffuse emerald green (#1B7A4A) ambient halo emanating from behind the bottle, '
+    'intensity 30% — creates depth without competing with the label. '
+    # ── LIGHTING ────────────────────────────────────────────────────────────
+    'LIGHTING: three-point studio setup — '
+    '(1) large softbox camera-left at 45°, 70% intensity, warm white 5500K; '
+    '(2) gold reflector (#C9A84C) rim light from camera-right, 25% intensity, '
+    'creates a fine warm edge highlight along the bottle contour; '
+    '(3) subtle back-light from below the marble, emerald green gel, 15% intensity. '
+    'No harsh shadows. Bottle casts a soft elongated reflection on the marble. '
+    # ── FOREGROUND STYLING ───────────────────────────────────────────────────
+    'FOREGROUND BOTANICALS: naturally arranged at the bottle base — '
+    'one halved orange showing vivid citrus cross-section, '
+    'one small knob of fresh ginger root with skin texture visible, '
+    'two sprigs of rosemary or thyme with fine needle detail, '
+    'a small scatter of raw seeds or dried berries. '
+    'All botanicals are sharp and vibrant; none obscure the product label. '
+    # ── CAMERA & COMPOSITION ────────────────────────────────────────────────
+    'CAMERA: 85mm portrait lens equivalent, f/2.2 aperture. '
+    'Bottle occupies 55% of frame height, centered horizontally, '
+    'lower third of frame has margin for text overlay if needed. '
+    'Shallow depth of field: label tack-sharp, botanicals and background softly blurred. '
+    # ── LOGO PLACEMENT ──────────────────────────────────────────────────────
+    'LOGO: insert the NutriHeal 360 logo from Reference Image 2 in the bottom-right corner. '
+    'Reproduce every element exactly — green leaf icon, "NutriHeal 360" wordmark, '
+    'original color values, original proportions. '
+    'Logo size: 11–13% of total frame width. '
+    'Position: 2% margin from right edge, 2% margin from bottom edge. '
+    'Logo must NOT overlap the bottle or any botanical element. '
+    'No glow, shadow, or color shift applied to the logo. '
+    # ── MOOD & OUTPUT ───────────────────────────────────────────────────────
+    'MOOD: pharmaceutical precision meets artisan wellness. '
+    'High-end Colombian nutraceutical brand. Clean, confident, trustworthy. '
+    'Output: 1:1 square, minimum 2048×2048 px, sRGB color space, no watermarks.'
 )
 
 LOGO_TAG = (
-    ' Place the NutriHeal 360 logo from the reference image in the bottom-right corner '
-    'exactly as it appears — do not recolor, redesign, modify, or alter any element of the '
-    'logo in any way (not the colors, not the typography, not the icon, not the proportions). '
-    'Use it as a fixed, pixel-accurate brand watermark.'
+    ' LOGO: insert the NutriHeal 360 logo from the reference image in the bottom-right corner — '
+    'reproduce every element exactly (green leaf icon, "NutriHeal 360" wordmark, '
+    'original colors, original proportions). '
+    'Size: 11–13% of frame width. Position: 2% margin from right and bottom edges. '
+    'No glow, shadow, or recoloring applied to the logo. '
+    'Output: 1:1 square, minimum 2048×2048 px, sRGB, no watermarks.'
 )
 
 OLD_TO_NEW_PROMPT = {
-    # Medicina Alternativa
+    # ── Medicina Alternativa ────────────────────────────────────────────────
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, homeopathic glass vials and pellets on botanical background, Colombian doctor consultation room background blurred, emerald and gold tones, trust and science emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, homeopathic glass vials and pellets on botanical background, blurred consultation room background, emerald and gold tones, trust and science emotion.' + LOGO_TAG,
+        (
+            'Photorealistic still-life photograph for a luxury Colombian wellness brand. '
+            'SUBJECT: three to four small amber glass homeopathic vials (10ml dropper bottles) '
+            'and a scatter of tiny white pellets arranged on a dark walnut surface. '
+            'One vial is uncapped and slightly tilted; fine pellets spill from its opening. '
+            'BOTANICALS: dried chamomile flowers, a sprig of fresh arnica, and two small dried '
+            'calendula petals placed naturally among the vials — no artificial arrangement. '
+            'BACKGROUND: blurred warm consultation room interior, bookshelves with medical texts '
+            'barely visible, very soft depth of field. '
+            'LIGHTING: single large softbox camera-left 5500K; warm gold (#C9A84C) reflector '
+            'camera-right adds a thin rim; emerald green (#1B7A4A) gel backlight 15% intensity '
+            'creates a subtle halo behind the vials. '
+            'MOOD: scientific trust meets artisan medicine — calm, precise, premium. '
+            'No text overlays, no digital effects, no stock-photo feel. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, iris of human eye close-up revealing health patterns, iridology diagnostic chart overlay, Colombian doctor consultation room background blurred, emerald and gold tones, trust and science emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, iris of a human eye close-up revealing health patterns with iridology diagnostic chart overlay, blurred consultation room background, emerald and gold tones.' + LOGO_TAG,
+        (
+            'Ultra-close-up macro photograph of a human iris in extreme detail. '
+            'EYE: dark brown iris typical of a Colombian adult; fine radiating trabecula fibers '
+            'clearly visible; pupil sharp and dark. '
+            'OVERLAY: a semi-transparent iridology chart (emerald green #1B7A4A lines, '
+            'opacity 35%) mapped precisely onto the iris surface — organ zones labeled in '
+            'fine gold (#C9A84C) sans-serif text, letters no larger than the trabecula fibers. '
+            'LIGHTING: ring flash centered on the iris, 5500K, even and shadow-free; '
+            'a faint emerald green reflection in the pupil adds depth. '
+            'BACKGROUND: blurred circular bokeh in deep teal-green, evoking both technology '
+            'and nature. '
+            'DEPTH OF FIELD: iris completely sharp edge-to-edge; eyelashes softly blurred. '
+            'MOOD: diagnostic precision, natural intelligence, holistic science. '
+            'No eyelid makeup, no artificial color grading that changes the iris hue. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, vintage botanical medical illustration with modern gold frame overlay, Colombian doctor consultation room background blurred, emerald and gold tones, trust and science emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, vintage botanical medical illustration with elegant modern gold frame overlay, blurred background, emerald and gold tones.' + LOGO_TAG,
+        (
+            'Editorial-style photograph of a hand-painted vintage botanical medical illustration '
+            'mounted inside a polished gold (#C9A84C) frame. '
+            'ILLUSTRATION: 19th-century style, depicting a medicinal plant (valerian, ginkgo, '
+            'or echinacea) with roots, stem, leaves, and flower labeled in old-Latin calligraphy. '
+            'Sepia-toned paper showing age, hand-watercolored in muted botanical greens and '
+            'ochre tones. '
+            'FRAME: ornate brushed gold metal, double-moulding, subtle patina — photographed '
+            'against a dark background so the gold glows. '
+            'LIGHTING: raking light from camera-right at 30° to reveal the paper texture; '
+            'soft emerald green (#1B7A4A) ambient light from behind the frame creates depth. '
+            'BACKGROUND: blurred dark emerald velvet or aged wood — no distracting elements. '
+            'MOOD: heritage wisdom meeting modern luxury healthcare. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, human silhouette with glowing energy meridian lines, holistic healing visualization, Colombian doctor consultation room background blurred, emerald and gold tones, trust and science emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, human silhouette with glowing energy meridian lines, holistic healing visualization, blurred background, emerald and gold tones.' + LOGO_TAG,
-    # Prevención Médica Diaria
+        (
+            'Conceptual wellness visualization: a semi-transparent human body silhouette '
+            '(slim adult figure, gender-neutral, viewed from front) rendered in translucent '
+            'deep teal, floating centered in a dark charcoal environment. '
+            'MERIDIAN LINES: 8–10 flowing energy pathways trace the traditional TCM meridian '
+            'routes — rendered as luminous emerald green (#1B7A4A) lines with soft particle '
+            'glow, 2–3 px wide, with animated-style directional light flow suggested by '
+            'varying brightness along each line. '
+            'KEY NODES: 7 circular gold (#C9A84C) energy points (chakra/meridian intersections) '
+            'pulse with a soft outer glow — each 12px diameter sphere. '
+            'BACKGROUND: deep space-like darkness with subtle emerald green particles drifting '
+            'upward, creating a sense of energy and ascent. '
+            'STYLE: 3D CGI realism, photorealistic skin-like translucency, cinematic grade. '
+            'No text, no labels, no anatomical annotations. '
+            'MOOD: healing energy, natural intelligence, holistic medicine. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
+    # ── Prevención Médica Diaria ────────────────────────────────────────────
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, fresh organic vegetables and medicinal plants arranged on dark slate, informative health poster style, Colombian demographic, emerald green and gold accents, hope and vitality emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, fresh organic vegetables and medicinal plants beautifully arranged on dark slate surface, Colombian demographic, emerald green and gold accents, hope and vitality emotion.' + LOGO_TAG,
+        (
+            'Top-down flat-lay photograph on a dark charcoal slate surface. '
+            'PRODUCE: a curated selection of 12–15 fresh whole vegetables and medicinal herbs — '
+            'red tomatoes, broccoli florets, baby spinach, purple kale, half an avocado, '
+            'raw garlic cloves, fresh turmeric root (cut open revealing orange interior), '
+            'a halved lemon, fresh ginger, parsley sprigs, and one whole pomegranate. '
+            'All items are at peak freshness, vibrant color, no wilting or blemishes. '
+            'ARRANGEMENT: organic, editorial food-styling — not a perfect grid, but a natural '
+            'abundant spread with deliberate negative space in the lower-right quadrant '
+            'for the NutriHeal 360 logo. '
+            'LIGHTING: soft overhead diffused natural light (10am window equivalent), '
+            '5600K; emerald green (#1B7A4A) color cast in the shadows. '
+            'Small gold (#C9A84C) accent props: two tiny ceramic medicine vials placed '
+            'among the vegetables. '
+            'MOOD: nutritional abundance, Colombian wellness culture, hope and vitality. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, human body anatomical illustration with glowing healthy organs, emerald green highlights, informative health poster style, Colombian demographic, emerald green and gold accents, hope and vitality emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, human body anatomical illustration with glowing healthy organs highlighted in emerald green, Colombian demographic, gold accents.' + LOGO_TAG,
+        (
+            'Medical-grade 3D CGI render of a human torso cross-section, gender-neutral, '
+            'showing healthy internal organs in photorealistic anatomical detail. '
+            'ORGANS: heart (slightly enlarged, vivid red with visible coronary vessels), '
+            'lungs (full and pink), liver (healthy amber), kidneys (both visible), '
+            'stomach and intestines (simplified but accurate). '
+            'GLOW EFFECT: each organ emits a subtle emerald green (#1B7A4A) inner-light pulse — '
+            'green overlay at 20% opacity — symbolizing peak health. '
+            'LABELS: fine gold (#C9A84C) connecting lines point to each organ with a clean '
+            'white sans-serif label (12pt equivalent). '
+            'BACKGROUND: dark neutral gray-charcoal gradient, no medical environment visible. '
+            'SKIN: translucent torso boundary visible as a thin frosted-glass layer. '
+            'STYLE: Zygote Body / Visible Human quality; cinematic lighting with soft rim. '
+            'MOOD: health education, scientific confidence, preventive medicine. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, healthy Colombian family at golden hour outdoor setting, vibrant wellness energy, informative health poster style, Colombian demographic, emerald green and gold accents, hope and vitality emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, healthy Colombian family at golden hour outdoor setting, vibrant wellness energy, natural environment, hope and vitality emotion.' + LOGO_TAG,
+        (
+            'Golden-hour lifestyle photograph of a healthy Colombian family of three — '
+            'parents (30s–40s) and one child (8–12 years old) — outdoors in a lush green park. '
+            'MOMENT: candid mid-activity — the child runs slightly ahead while parents walk '
+            'closely together, all laughing naturally. No forced poses. '
+            'DEMOGRAPHICS: distinctly Colombian features — warm mestizo skin tones, '
+            'dark hair, everyday athletic wear in earth tones. '
+            'LIGHT: 6:00 pm golden hour, sun at 15° above horizon camera-right; '
+            'long warm shadows, skin glows with golden (#C9A84C) backlight, '
+            'green grass reflects a faint emerald (#1B7A4A) fill light on shadowed side. '
+            'BACKGROUND: Cali urban park — tall ceiba trees in background, '
+            'distant Farallones mountains barely visible in the haze. '
+            'LENS: 85mm f/1.8, subject sharp, background beautifully bokeh. '
+            'MOOD: achievable wellness, family vitality, Colombian pride, hope. '
+            'No stock-photo feel. Natural, editorial, authentic. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, DNA helix structure with protective shield overlay, prevention concept, informative health poster style, Colombian demographic, emerald green and gold accents, hope and vitality emotion':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, DNA helix structure with glowing protective shield overlay symbolizing prevention, emerald green and gold accents.' + LOGO_TAG,
-    # Casos de Éxito
+        (
+            'Scientific CGI visualization: a photorealistic DNA double helix floating in '
+            'a dark void, occupying 60% of the frame height, slightly tilted 15° on its '
+            'vertical axis for dynamism. '
+            'HELIX DETAIL: full base-pair rungs visible; outer backbone strands rendered as '
+            'deep emerald green (#1B7A4A) metallic ribbons with specular highlight; '
+            'base pairs in alternating muted gold (#C9A84C) and white. '
+            'SHIELD: a semi-transparent hexagonal force-shield surrounding the helix — '
+            'thin emerald green lines forming the honeycomb lattice, opacity 40%, '
+            'with a soft electric pulse effect at the perimeter. '
+            'PARTICLE FIELD: fine glowing particles (emerald and gold) drift upward '
+            'around the helix — suggests energy, protection, and dynamism. '
+            'LIGHTING: directional cinematic key from camera-left; '
+            'cool blue-teal ambient fill from below. '
+            'MOOD: genetic-level protection, cutting-edge preventive science, confidence. '
+            'No text overlays. Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
+
+    # ── Casos de Éxito / Trayectoria ───────────────────────────────────────
+
     'Photorealistic professional medical marketing image, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, Colombian patient and doctor moment of success in medical consultation room, warm smile, trust and gratitude emotion, San Fernando Cali medical office aesthetic, certificate wall background, emerald green plants, gold framed diplomas, before-after transformation concept':
-        'Photorealistic professional wellness photograph, emerald green (#1B7A4A) and premium gold (#C9A84C) color palette, luxury health brand aesthetic, ultra-detailed, 8K resolution, soft cinematic lighting, Colombian patient and doctor sharing a warm moment of success inside a consultation room, natural smile, trust and gratitude, San Fernando Cali office aesthetic with certificate wall, emerald green plants and gold framed diplomas in background.' + LOGO_TAG,
+        (
+            'Warm editorial photograph inside a private medical consultation room in '
+            'San Fernando, Cali, Colombia. '
+            'SUBJECT: a Colombian male doctor (50s, silver-streaked dark hair, white coat) '
+            'facing a smiling female patient (40s, warm mestizo complexion, business-casual). '
+            'MOMENT: the doctor extends his right hand for a congratulatory handshake; '
+            'both are mid-laugh — natural, unscripted, genuine trust. '
+            'ROOM DETAILS: behind the doctor — a wall of gold-framed academic diplomas '
+            'and INVIMA certificates (Latin text partially visible); '
+            'a healthy monstera plant to the left in a terracotta pot; '
+            'a dark-wood desk with a closed laptop and a branded NutriHeal notepad. '
+            'LIGHTING: warm overhead tungsten 3200K; a floor lamp behind the patient '
+            'provides soft emerald (#1B7A4A) upward fill that reflects off the white walls. '
+            'Gold diploma frames catch the warm light and add specular glints. '
+            'LENS: 50mm f/2.0, subjects sharp, room detail visible but softly blurred. '
+            'MOOD: transformation achieved, trust earned, medical authority combined with '
+            'human warmth. Colombian clinical excellence. '
+            'Aspect ratio 1:1, minimum 2048×2048 px.'
+        ) + LOGO_TAG,
 }
 
 # Regex para detectar prompts de Suplementación (formato viejo)
@@ -214,33 +403,67 @@ def extraer_puntos_guion(copy, n=3):
 
 
 _BROLL = {
-    'Suplementación NutriHeal':    '{producto} en close-up, animaciones moleculares 3D del mecanismo de acción, testimonios en texto flotante, sello INVIMA animado',
-    'Medicina Alternativa':        'ilustraciones de medicina homeopática, imágenes de iridodiagnosis, plantas medicinales en close-up, consultorio San Fernando Cali',
-    'Prevención Médica Diaria':    'infografías de salud preventiva, estadísticas en texto animado, alimentos y plantas medicinales, familia colombiana saludable',
-    'Casos de Éxito / Trayectoria':'tarjetas de testimonios de pacientes, antes/después en texto, consultorio con diplomas y certificados enmarcados en dorado',
+    'Suplementación NutriHeal': (
+        'SEC 0-3s: logo NutriHeal 360 animado fade-in sobre fondo negro. '
+        'SEC 3-8s: close-up rotatorio del frasco de {producto} — 360° giro lento, iluminación de producto. '
+        'SEC 8-15s: animación 3D del mecanismo de acción (molécula viajando al órgano objetivo). '
+        'SEC 15-22s: infografía minimalista con los 3 beneficios clave del producto (texto aparece con slide-in). '
+        'SEC 22-28s: sello INVIMA animado aparece en pantalla con partículas doradas. '
+        'SEC 28-fin: CTA animado — ícono WhatsApp verde pulsante + número +57 314 708 8080.'
+    ),
+    'Medicina Alternativa': (
+        'SEC 0-3s: logo NutriHeal 360 animado fade-in sobre fondo negro. '
+        'SEC 3-10s: toma macro de viales homeopáticos y gránulos sobre superficie botánica — foco pull suave. '
+        'SEC 10-18s: ilustración de iridodiagnosis animada — el iris se abre y el mapa de zonas aparece superpuesto. '
+        'SEC 18-25s: manos del Dr. Mestizo examinando plantas medicinales en consultorio (close-up). '
+        'SEC 25-fin: tarjeta de cierre — logo NutriHeal, dirección consultorio San Fernando Cali, CTA WhatsApp.'
+    ),
+    'Prevención Médica Diaria': (
+        'SEC 0-3s: logo NutriHeal 360 animado fade-in. '
+        'SEC 3-10s: flat-lay animado de vegetales y plantas medicinales con texto de estadística apareciendo (ej. "70% de las enfermedades crónicas son prevenibles"). '
+        'SEC 10-18s: render 3D de cuerpo humano con órganos saludables iluminándose en verde esmeralda uno por uno. '
+        'SEC 18-25s: familia colombiana saludable al aire libre — corte editorial, cámara lenta. '
+        'SEC 25-fin: CTA animado — WhatsApp + "Agenda tu consulta hoy".'
+    ),
+    'Casos de Éxito / Trayectoria': (
+        'SEC 0-3s: logo NutriHeal 360 animado fade-in. '
+        'SEC 3-10s: tarjeta de testimonio con nombre de paciente (ficticio/genérico), foto de perfil anonimizada, y cita textual en scroll animado. '
+        'SEC 10-18s: línea de tiempo animada de la trayectoria del Dr. Mestizo — diplomas y certificados aparecen con golden glow. '
+        'SEC 18-25s: interior consultorio San Fernando — cámara lenta panorámica de pared de certificados. '
+        'SEC 25-fin: CTA — WhatsApp + "Soy paciente, quiero agendar".'
+    ),
 }
 
 _HEYGEN_PLAT = {
     'Facebook': {
-        'encuadre':   'plano americano clásico (3/4 figura)',
-        'fondo':      'consultorio NutriHeal San Fernando Cali — escritorio médico, planta monstera, vitrina con productos NutriHeal visibles',
-        'iluminacion':'softbox frontal + luz esmeralda lateral',
-        'formato':    '1:1 (Feed) o 16:9 (video nativo) — 1080x1080 / 1920x1080',
-        'duracion':   '60-90 segundos',
+        'encuadre':    'Plano americano clásico (cadera-cabeza), Dr. Mestizo ligeramente descentrado a la izquierda (regla de tercios), espacio derecho para texto overlay.',
+        'fondo':       'Consultorio NutriHeal San Fernando Cali — escritorio médico de madera oscura en segundo plano, monstera grande a la izquierda, vitrina con frascos NutriHeal visibles y retroiluminados en verde esmeralda, diplomas enmarcados en dorado en la pared.',
+        'iluminacion': 'Softbox 80×80cm frontal a 45° (luz principal, 5500K); reflector dorado lateral derecho (relleno cálido, 3200K 30%); backlight esmeralda (#1B7A4A) de bajo perfil detrás del sujeto para separarlo del fondo.',
+        'voz':         'Tono: autoridad médica cálida y cercana. Ritmo: 130-140 ppm. Pausas dramatúrgicas después de afirmaciones clave (0.5s). Énfasis en sustantivos médicos importantes.',
+        'formato':     '1:1 (Feed cuadrado) — 1080×1080 px. Captions en español con fuente sans-serif blanca, outline negro, tamaño 42pt, posición 10% desde el borde inferior.',
+        'duracion':    '60-90 segundos. Los primeros 3s deben contener el hook sin intro.',
+        'hook':        'Pregunta retórica directa al espectador relacionada con el tema (ej: "¿Sabías que el 80% de la fatiga crónica tiene solución natural?").',
+        'cta':         'Últimos 8s: "Escríbeme al WhatsApp +57 314 708 8080 para una consulta personalizada." Overlay: botón WhatsApp animado verde.',
     },
     'Instagram': {
-        'encuadre':   'primer plano (hombros-cabeza) centrado',
-        'fondo':      'consultorio blanco-verde esmeralda minimalista, planta en esquina, logo NutriHeal visible en fondo',
-        'iluminacion':'luz natural lateral + relleno suave',
-        'formato':    '9:16 vertical (Reels) — 1080x1920',
-        'duracion':   '30-60 segundos. Entrada directa sin intro; CTA animado al final',
+        'encuadre':    'Primer plano cerrado (hombros-cabeza), centrado en pantalla. El Dr. Mestizo habla directo a cámara. Encuadre seguro para zona 9:16 con notch superior e inferior.',
+        'fondo':       'Consultorio minimalista — pared blanca con acento esmeralda, logo NutriHeal 360 visible en el fondo desenfocado (tamaño 15% del frame), planta en esquina izquierda.',
+        'iluminacion': 'Luz natural simulada desde ventana lateral izquierda (difusa, 5600K); reflector blanco suave frontal para eliminar sombras bajo los ojos; sin backlight agresivo.',
+        'voz':         'Tono: energético, cercano, conversacional. Ritmo: 150-160 ppm (más rápido para Reels). Primera oración sin pausa — engancha en los primeros 1.5s.',
+        'formato':     '9:16 vertical (Reels) — 1080×1920 px. Captions en español, estilo TikTok: una palabra o frase corta a la vez, fuente bold blanca con sombra, posición central.',
+        'duracion':    '30-45 segundos idealmente (máximo 60s). Sin intro, sin "hola soy el Dr. Mestizo" — empieza con el dato o la pregunta.',
+        'hook':        'Primera oración: un dato sorprendente o una afirmación que genere curiosidad inmediata. Debe funcionar sin sonido (solo con captions).',
+        'cta':         'Últimos 5s: "Enlace en mi bio para agendar" + ícono de flecha hacia arriba animado + sticker WhatsApp si la plataforma lo permite.',
     },
     'YouTube': {
-        'encuadre':   'plano medio-americano (cintura-cabeza)',
-        'fondo':      'consultorio NutriHeal San Fernando Cali — estantería con libros médicos, plantas verdes, diploma en pared dorada, luz cálida lateral',
-        'iluminacion':'softbox principal + luz de relleno dorada + backlight esmeralda',
-        'formato':    '16:9 horizontal — 1920x1080 (Full HD)',
-        'duracion':   '8-12 minutos',
+        'encuadre':    'Plano medio-americano (cintura-cabeza), Dr. Mestizo centrado o ligeramente a la izquierda. Cámara a la altura de los ojos. Espacio de cabeza estándar (15% superior).',
+        'fondo':       'Consultorio NutriHeal San Fernando Cali — estantería completa con libros médicos y tratados de nutrición, 3-4 plantas verdes variadas, pared con diploma principal enmarcado en dorado visible sobre el hombro derecho, iluminación cálida de lámpara de escritorio.',
+        'iluminacion': 'Softbox 120×80cm a 45° frontal izquierdo (clave, 5500K, 100%); panel LED dorado (#C9A84C) lateral derecho como relleno cálido (40%); kicker esmeralda (#1B7A4A) desde abajo-atrás para separar del fondo (25%). Calidad YouTuber médico premium.',
+        'voz':         'Tono: profesor universitario accesible. Ritmo: 120-130 ppm con pausas de 1s para puntos importantes. Entonación descendente al cierre de cada sección. Articulación clara.',
+        'formato':     '16:9 horizontal — 1920×1080 px (Full HD). Captions opcionales (activar auto-subtítulos YouTube). Lower thirds animados para nombre del tema de cada sección.',
+        'duracion':    '8-12 minutos. Estructura: Intro gancho (0-30s) → Contexto clínico (30s-2min) → Desarrollo en 3 puntos (2-9min) → Resumen + CTA (9-fin).',
+        'hook':        'Los primeros 30 segundos: presentar el problema que el espectador reconoce, no el título del video. Ej: "Si llevas más de 6 meses con este síntoma, necesitas ver este video."',
+        'cta':         'En minuto 7 (CTA de medio) y en los últimos 60s (CTA final): "Agenda tu consulta en el link de la descripción o escríbeme al WhatsApp +57 314 708 8080." Card final de YouTube visible.',
     },
 }
 
@@ -258,20 +481,37 @@ def generar_heygen(copy, pilar, red, producto=None):
     elif '{producto}' in broll:
         broll = broll.replace('{producto} en close-up, ', '')
 
-    guion_puntos = ' | '.join(puntos) if puntos else titulo
+    guion_puntos = ' | '.join(f'({i+1}) {p}' for i, p in enumerate(puntos)) if puntos else titulo
     texto_pantalla = producto if ('Suplementación' in pilar and producto) else titulo[:70]
 
     partes = [
-        'Avatar: Dr. Mestizo HD.',
-        f'TEMA DEL VIDEO: {titulo}.',
-        f'GUIÓN: El Dr. Mestizo habla sobre este tema. Script basado en el copy del post — puntos clave a desarrollar: {guion_puntos}. Cierra con CTA al WhatsApp +57 314 708 8080.',
-        f'ENCUADRE: {meta["encuadre"]}.',
-        f'FONDO: {meta["fondo"]}.',
-        f'ILUMINACIÓN: {meta["iluminacion"]}.',
-        f'B-ROLL: {broll}.',
-        f'TEXTO EN PANTALLA: "{texto_pantalla}" en verde esmeralda (#1B7A4A).',
-        f'FORMATO: {meta["formato"]}.',
-        f'DURACIÓN: {meta["duracion"]}.',
+        '═══ INSTRUCCIÓN HEYGEN — DR. MESTIZO ═══',
+        f'AVATAR: Dr. Mestizo — clonar con voz registrada del Dr. Mestizo (audio de referencia en carpeta /Audio_Referencia). Expresión neutral-cálida. Pestañeo natural activado.',
+        f'TEMA: {titulo}.',
+        f'PILAR: {pilar} | RED: {red}.',
+        '',
+        f'HOOK (apertura — primeros {3 if red == "Instagram" else 5}s): {meta["hook"]}',
+        '',
+        f'GUIÓN — PUNTOS CLAVE A DESARROLLAR:',
+        guion_puntos,
+        'Cierre con CTA específico (ver sección CTA abajo).',
+        '',
+        f'VOZ Y RITMO: {meta["voz"]}',
+        '',
+        f'ENCUADRE DE CÁMARA: {meta["encuadre"]}',
+        f'FONDO / ESCENOGRAFÍA: {meta["fondo"]}',
+        f'ILUMINACIÓN: {meta["iluminacion"]}',
+        '',
+        f'B-ROLL (inserts de video para cortar sobre el discurso):',
+        broll,
+        '',
+        f'TEXTO EN PANTALLA PRINCIPAL: "{texto_pantalla}" — fuente sans-serif, color esmeralda (#1B7A4A), borde blanco, aparece en los primeros 5s del video.',
+        f'LOWER THIRDS (si aplica): "Dr. Germán Mestizo | Médico Nutriólogo | Reg. Prof. XXXXXX" en el segundo 4-8.',
+        '',
+        f'CTA: {meta["cta"]}',
+        f'FORMATO FINAL: {meta["formato"]}',
+        f'DURACIÓN OBJETIVO: {meta["duracion"]}',
+        '═══════════════════════════════════════',
     ]
     return ' '.join(partes)
 
@@ -287,8 +527,8 @@ def actualizar_hoja_fuente(wb, nombre_hoja):
     ws = wb[nombre_hoja]
 
     # Asegurar encabezados en columnas 13 y 14
-    ws.cell(row=1, column=13).value = '📦 Imagen Producto (Ref. 1 — nano banana)'
-    ws.cell(row=1, column=14).value = '🏷️ Logo NutriHeal (Ref. 2 — nano banana)'
+    ws.cell(row=1, column=13).value = '📦 Imagen Producto (Ref. 1 — ElevenLabs Image)'
+    ws.cell(row=1, column=14).value = '🏷️ Logo NutriHeal (Ref. 2 — ElevenLabs Image)'
     for col in (13, 14):
         ws.cell(row=1, column=col).font = Font(bold=True)
         ws.cell(row=1, column=col).alignment = Alignment(wrap_text=True, vertical='top')
@@ -421,7 +661,7 @@ PLATFORM_META = {
     'Instagram': {'sheet': '📷 Instagram', 'aspecto': '9:16 (Vertical — Reels)',          'resolucion': '1080x1920',             'duracion': '30-60 segundos',                      'post_subtype': 'Reel',  'cta': '', 'link': ''},
     'YouTube':   {'sheet': '▶️ YouTube',   'aspecto': '16:9 (Horizontal)',                'resolucion': '1920x1080 (mínimo Full HD)', 'duracion': '8-12 minutos',                   'post_subtype': 'Video', 'cta': '', 'link': ''},
 }
-MEDIA_PENDIENTE = 'PENDIENTE — generar con nano banana (FLUX.2 Pro) / HeyGen y subir antes de programar'
+MEDIA_PENDIENTE = 'PENDIENTE — generar con ElevenLabs Image (imagen) / HeyGen (video avatar) y subir antes de programar'
 
 from datetime import datetime
 TITULO_RE = re.compile(r'"([^"]+)"')
