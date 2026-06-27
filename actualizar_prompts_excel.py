@@ -516,6 +516,166 @@ def generar_heygen(copy, pilar, red, producto=None):
     return ' '.join(partes)
 
 
+# ── Reglas de carrusel por red + pilar ───────────────────────────────────────
+# 1 = imagen individual | N>1 = carrusel de N diapositivas
+CAROUSEL_RULES = {
+    'Facebook': {
+        'Suplementación NutriHeal':     3,
+        'Medicina Alternativa':         1,
+        'Prevención Médica Diaria':     3,
+        'Casos de Éxito / Trayectoria': 1,
+    },
+    'Instagram': {
+        'Suplementación NutriHeal':     4,
+        'Medicina Alternativa':         3,
+        'Prevención Médica Diaria':     3,
+        'Casos de Éxito / Trayectoria': 1,
+    },
+    'YouTube': {
+        'Suplementación NutriHeal':     1,
+        'Medicina Alternativa':         1,
+        'Prevención Médica Diaria':     1,
+        'Casos de Éxito / Trayectoria': 1,
+    },
+}
+
+_SPECS_GLOBALES = (
+    '\n── ESPECIFICACIONES GLOBALES (todas las diapositivas) ──\n'
+    'Formato: 1:1 cuadrado, mínimo 2048×2048 px, sRGB.\n'
+    'Paleta de marca: esmeralda (#1B7A4A) + dorado (#C9A84C) + negro/gris oscuro.\n'
+    'Tipografía: sans-serif moderna bold para títulos, regular para cuerpo.\n'
+    'Consistencia visual entre diapositivas: mismo estilo de iluminación y fondo.\n'
+    'Sin marcas de agua ni texto generado por IA. Cada diapositiva funciona sola Y en secuencia.'
+)
+
+_SLIDE_CTA = (
+    'Diapositiva CTA (llamado a la acción). '
+    'FONDO: gradiente vertical de negro (#0A0A0A) a verde esmeralda oscuro (#0D3B22), viñeta suave. '
+    'ELEMENTO CENTRAL: logo NutriHeal 360 centrado, reproducido exactamente del archivo de referencia, '
+    'tamaño 35% del ancho del frame — sin recolorar, sin rediseñar. '
+    'TEXTO SUPERIOR: "¿Tienes preguntas?" — sans-serif blanco bold 52pt, '
+    'separado del logo por 32px de margen. '
+    'TEXTO INFERIOR: "Escríbenos al WhatsApp" — blanco regular 38pt. '
+    'NÚMERO: "+57 314 708 8080" — dorado (#C9A84C) bold 54pt con ícono WhatsApp verde (48px) a la izquierda. '
+    'DECORACIÓN: marco geométrico dorado de línea fina (2px) con esquinas redondeadas, '
+    'a 3% del borde del frame; partículas luminosas dispersas en el fondo. '
+    'Sin fotografías ni figuras humanas. Composición centrada, espaciado generoso, look premium.'
+)
+
+
+def n_imagenes_para(pilar, red):
+    """Número de imágenes/slides para este pilar y red."""
+    return CAROUSEL_RULES.get(red, {}).get(pilar, 1)
+
+
+def tipo_visual_label(n):
+    """Etiqueta para la columna tipo visual."""
+    return '1 imagen' if n == 1 else f'Carrusel — {n} diapositivas'
+
+
+def generar_prompt_carrusel(prompt_base, pilar, red, n_slides, producto=None):
+    """
+    Construye el prompt multi-slide para ElevenLabs Image.
+    prompt_base: prompt individual ya generado para la diapositiva 1 (portada/imagen temática).
+    """
+    prod_str = f' de {producto}' if producto else ''
+
+    if pilar == 'Suplementación NutriHeal':
+        slide_mecanismo = (
+            'Visualización científica 3D del mecanismo de acción del suplemento' + prod_str + '. '
+            'ESTILO: CGI fotorrealista, calidad de ilustración médica premium. '
+            'CONTENIDO: silueta humana translúcida en azul-esmeralda; '
+            'el órgano o sistema objetivo (digestivo, cardiovascular, nervioso según el producto) '
+            'iluminado en verde esmeralda brillante (#1B7A4A) con pulso de brillo suave. '
+            'Partículas doradas (#C9A84C) de 3-4px representan los principios activos '
+            'viajando desde el estómago hasta el órgano diana — trayectoria curva con motion trail. '
+            'FONDO: negro profundo con nebulosa esmeralda muy sutil en la parte superior. '
+            'TEXTO OVERLAY: una cifra clave (ej: "Absorción en 30 min") — '
+            'sans-serif bold blanco 44pt, centrado, con separador dorado de 1px. '
+            'LOGO NutriHeal 360 en esquina inferior derecha, 11% ancho, reproducido exactamente.'
+        )
+        slide_beneficios = (
+            'Infografía de beneficios del suplemento' + prod_str + '. '
+            'LAYOUT: 3 filas apiladas verticalmente, separadas por líneas doradas (#C9A84C) de 1px, '
+            'márgenes laterales de 5% por lado. '
+            'Cada fila: número ordinal en dorado bold 72pt (ancho fijo 80px izq.) + '
+            'descripción del beneficio en blanco 36pt a la derecha '
+            '(máx. 2 líneas por beneficio, alto de fila igual para las 3). '
+            'ENCABEZADO: "3 beneficios comprobados" — blanco bold 50pt, '
+            'centrado en la parte superior, subrayado con línea dorada de 2px. '
+            'FONDO: negro (#0A0A0A) con grain textural sutil (opacity 4%). '
+            'ÍCONO decorativo verde esmeralda (hoja o escudo, 36px) junto al encabezado. '
+            'LOGO NutriHeal 360 en esquina inferior derecha, 11% ancho, reproducido exactamente.'
+        )
+        if n_slides == 3:
+            diapos = [
+                ('PORTADA — Foto hero del producto', prompt_base),
+                ('MECANISMO DE ACCIÓN', slide_mecanismo),
+                ('CTA — Llamado a la acción', _SLIDE_CTA),
+            ]
+        else:  # 4 slides para Instagram
+            diapos = [
+                ('PORTADA — Foto hero del producto', prompt_base),
+                ('MECANISMO DE ACCIÓN', slide_mecanismo),
+                ('3 BENEFICIOS CLAVE', slide_beneficios),
+                ('CTA — Llamado a la acción', _SLIDE_CTA),
+            ]
+
+    elif pilar == 'Prevención Médica Diaria':
+        slide_tips = (
+            'Infografía de prevención médica — 3 hábitos de salud. '
+            'LAYOUT: lista vertical de 3 filas iguales, cada fila ocupa 28% del alto total '
+            '(margen superior e inferior de 8% para encabezado y logo). '
+            'CADA FILA: número ordinal dorado 72pt bold (columna izquierda 18% ancho) + '
+            'consejo de salud preventiva en blanco sans-serif 36pt (columna derecha 78%). '
+            'ÍCONO: uno de estos por fila — 🥦🛡️💧 — renderizado en verde esmeralda, 40px, '
+            'alineado con el número. '
+            'SEPARADORES: líneas doradas (#C9A84C) de 1px entre filas. '
+            'ENCABEZADO: "Prevención que funciona" — blanco bold 50pt, margen superior, '
+            'con línea decorativa dorada de 2px debajo. '
+            'FONDO: gradiente diagonal de verde esmeralda oscuro (#0D3B22) a negro. '
+            'LOGO NutriHeal 360 en esquina inferior derecha, 11% ancho, reproducido exactamente.'
+        )
+        diapos = [
+            ('PORTADA — Imagen temática', prompt_base),
+            ('3 HÁBITOS PREVENTIVOS', slide_tips),
+            ('CTA — Llamado a la acción', _SLIDE_CTA),
+        ]
+
+    elif pilar == 'Medicina Alternativa':
+        slide_ciencia = (
+            'Visualización editorial de medicina integrativa — evidencia científica. '
+            'ESTILO: poster científico premium, cruce entre revista médica y editorial de diseño. '
+            'CONTENIDO: detalle macro de planta medicinal (raíces, hojas, flores) '
+            'con anotaciones en tipografía serif dorada — nombres botánicos en latín, '
+            'compuestos activos marcados con líneas finas (#C9A84C). '
+            'FONDO: negro con viñeta verde esmeralda muy suave (#1B7A4A, 15%) en bordes. '
+            'TEXTO CENTRAL: una afirmación científica clave en mayúsculas — '
+            'sans-serif blanco bold 44pt — con separador horizontal dorado de 2px encima y debajo. '
+            'Ejemplo de afirmación: "Validado por investigación clínica". '
+            'COMPOSICIÓN: planta ocupa 60% del frame a la izquierda; '
+            'texto anclado a la derecha en columna de 38% de ancho. '
+            'LOGO NutriHeal 360 en esquina inferior derecha, 11% ancho, reproducido exactamente.'
+        )
+        diapos = [
+            ('PORTADA — Imagen temática', prompt_base),
+            ('EVIDENCIA CIENTÍFICA', slide_ciencia),
+            ('CTA — Llamado a la acción', _SLIDE_CTA),
+        ]
+
+    else:
+        # Casos de Éxito u otro no definido — no debería llegar aquí
+        return prompt_base
+
+    lineas = [f'[CARRUSEL — {n_slides} DIAPOSITIVAS — ElevenLabs Image]\n']
+    for i, (etiqueta, desc) in enumerate(diapos, 1):
+        lineas.append(f'▶ DIAPOSITIVA {i}/{n_slides} — {etiqueta}:')
+        lineas.append(desc)
+        lineas.append('')
+    lineas.append(_SPECS_GLOBALES)
+    return '\n'.join(lineas)
+
+
 def make_hyperlink_cell(ws, row, col, url, label):
     cell = ws.cell(row=row, column=col)
     cell.value = label
@@ -526,16 +686,25 @@ def make_hyperlink_cell(ws, row, col, url, label):
 def actualizar_hoja_fuente(wb, nombre_hoja):
     ws = wb[nombre_hoja]
 
-    # Asegurar encabezados en columnas 13 y 14
-    ws.cell(row=1, column=13).value = '📦 Imagen Producto (Ref. 1 — ElevenLabs Image)'
-    ws.cell(row=1, column=14).value = '🏷️ Logo NutriHeal (Ref. 2 — ElevenLabs Image)'
-    for col in (13, 14):
+    # ── Encabezados fijos ──────────────────────────────────────────────────────
+    # Col 9: renombrar de Midjourney → ElevenLabs Image
+    ws.cell(row=1, column=9).value = 'Prompt ElevenLabs Image (EN)'
+    ws.cell(row=1, column=9).font = Font(bold=True)
+    ws.cell(row=1, column=9).alignment = Alignment(wrap_text=True, vertical='top')
+
+    for col, titulo in [
+        (13, '📦 Imagen Producto (Ref. 1 — ElevenLabs Image)'),
+        (14, '🏷️ Logo NutriHeal (Ref. 2 — ElevenLabs Image)'),
+        (15, '🖼️ Tipo de Contenido Visual'),
+    ]:
+        ws.cell(row=1, column=col).value = titulo
         ws.cell(row=1, column=col).font = Font(bold=True)
         ws.cell(row=1, column=col).alignment = Alignment(wrap_text=True, vertical='top')
     ws.column_dimensions[get_column_letter(13)].width = 32
     ws.column_dimensions[get_column_letter(14)].width = 30
+    ws.column_dimensions[get_column_letter(15)].width = 26
 
-    # Red social de esta hoja (para HeyGen)
+    # Red social de esta hoja (para HeyGen y carrusel)
     red_nombre = nombre_hoja.replace('📘 ', '').replace('📷 ', '').replace('▶️ ', '').strip()
 
     filas_ok = 0
@@ -545,12 +714,18 @@ def actualizar_hoja_fuente(wb, nombre_hoja):
         if not prompt_viejo:
             continue
 
-        copy    = ws.cell(r, 8).value or ''
-        pilar   = ws.cell(r, 4).value or ''
+        copy  = ws.cell(r, 8).value or ''
+        pilar = ws.cell(r, 4).value or ''
 
-        # ── Col 9: prompt imagen ──────────────────────────────────────────────
+        # ── Col 9: prompt imagen (individual o carrusel) ──────────────────────
         nuevo_p, nombre_prod = nuevo_prompt(str(prompt_viejo))
+        n_imgs = n_imagenes_para(pilar, red_nombre)
+        if n_imgs > 1:
+            nuevo_p = generar_prompt_carrusel(
+                nuevo_p, pilar, red_nombre, n_imgs, producto=nombre_prod
+            )
         ws.cell(r, 9).value = nuevo_p
+        ws.cell(r, 9).alignment = Alignment(wrap_text=True, vertical='top')
 
         # ── Col 11: instrucción HeyGen dinámica ──────────────────────────────
         heygen_instr = generar_heygen(copy, pilar, red_nombre, producto=nombre_prod)
@@ -573,7 +748,17 @@ def actualizar_hoja_fuente(wb, nombre_hoja):
             ws.cell(r, 13).alignment = Alignment(vertical='top')
             ws.cell(r, 13).font = Font(color='888888', italic=True)
 
-        if nuevo_p == prompt_viejo and not PRODUCTO_RE_NEW.search(nuevo_p):
+        # ── Col 15: tipo de contenido visual ─────────────────────────────────
+        label = tipo_visual_label(n_imgs)
+        cell15 = ws.cell(r, 15)
+        cell15.value = label
+        cell15.alignment = Alignment(vertical='top')
+        if n_imgs > 1:
+            cell15.font = Font(bold=True, color='1B7A4A')  # verde esmeralda
+        else:
+            cell15.font = Font(color='444444')
+
+        if nuevo_p == str(prompt_viejo) and not PRODUCTO_RE_NEW.search(str(prompt_viejo)):
             filas_sin_map += 1
         filas_ok += 1
 
