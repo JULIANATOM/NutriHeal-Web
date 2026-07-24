@@ -24,6 +24,11 @@
       "id": 5,
       "nombre": "Atopeel",
       "blob_carpeta": "Atopel"
+    },
+    {
+      "id": 6,
+      "nombre": "Herssen",
+      "blob_carpeta": "Herssen"
     }
   ],
   "categorias": [
@@ -436,6 +441,46 @@
         {
           "id": 83,
           "nombre": "Cuidado Labial"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "Fitomedicamentos Herssen",
+      "marca_id": 6,
+      "marca": "Herssen",
+      "subcategorias": [
+        {
+          "id": 84,
+          "nombre": "Sistema Osteomuscular"
+        },
+        {
+          "id": 85,
+          "nombre": "Sistema Digestivo"
+        },
+        {
+          "id": 86,
+          "nombre": "Hepatoprotector"
+        },
+        {
+          "id": 87,
+          "nombre": "Adaptógeno"
+        },
+        {
+          "id": 88,
+          "nombre": "Sistema Urinario Masculino"
+        },
+        {
+          "id": 89,
+          "nombre": "Cardiovascular"
+        },
+        {
+          "id": 90,
+          "nombre": "Sistema Respiratorio"
+        },
+        {
+          "id": 91,
+          "nombre": "Nutracéutico"
         }
       ]
     }
@@ -3721,6 +3766,234 @@
       "marca_id": 5,
       "blob_carpeta": "Atopel",
       "imagen": "Atopel/7.webp"
+    },
+    {
+      "id": 194,
+      "codigo": "HRS-COXAR",
+      "nombre": "COX-AR",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Osteomuscular",
+      "subcategoria_id": 84,
+      "registro_invima": "MFP2014-0002269",
+      "precio": 0.0,
+      "observaciones": "Artritis, Osteoartrosis (cadera y rodilla), Artropatía dolorosa, Dolor cervical y lumbar crónico. Control integral del dolor y la inflamación osteoarticular y osteomuscular.",
+      "presentacion": "Frasco x 60 cápsulas de 480 mg",
+      "posologia": "2 cápsulas al día durante 7 días; luego 1 cápsula al día",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Cox-ar.png"
+    },
+    {
+      "id": 195,
+      "codigo": "HRS-BIOMAG",
+      "nombre": "BIOMAGNET",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Osteomuscular",
+      "subcategoria_id": 84,
+      "registro_invima": "SD2019-0004430",
+      "precio": 0.0,
+      "observaciones": "Fatiga y espasmo muscular, manejo de calambres, protección de lesión muscular, déficit de magnesio. Contiene 4 sales de magnesio con >60% biodisponibilidad.",
+      "presentacion": "Frasco x 30 cápsulas",
+      "posologia": "1 cápsula al día, preferiblemente en las noches",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/BioMagnet.png"
+    },
+    {
+      "id": 196,
+      "codigo": "HRS-STOVID",
+      "nombre": "STO VID",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Digestivo",
+      "subcategoria_id": 85,
+      "registro_invima": "SD2012-0002665",
+      "precio": 0.0,
+      "observaciones": "Protector, antiinflamatorio y cicatrizante de la mucosa digestiva. Indicado en reflujo gastroesofágico, hiperacidez por dispepsia, cicatrización de úlceras y aftas.",
+      "presentacion": "Frasco x 360 mL (suspensión)",
+      "posologia": "Adultos y niños >6 años: 12 mL 3 veces al día. Niños 2–6 años: 6 mL 3 veces al día",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Sto Vid.png"
+    },
+    {
+      "id": 197,
+      "codigo": "HRS-GASTBI",
+      "nombre": "GASTRI BIDENS",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Digestivo",
+      "subcategoria_id": 85,
+      "registro_invima": "TFP2020-0002698",
+      "precio": 0.0,
+      "observaciones": "Antiulcerogénico a base de Bidens pilosa L. Indicado en gastritis, enfermedad úlcero-péptica y coadyuvante frente a Helicobacter pylori.",
+      "presentacion": "Frasco x 60 tabletas de 217 mg",
+      "posologia": "1 tableta cada 12 horas",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Gastri Bidens.png"
+    },
+    {
+      "id": 198,
+      "codigo": "HRS-DIGRET",
+      "nombre": "DI GRET",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Digestivo",
+      "subcategoria_id": 85,
+      "registro_invima": "SD2013-0002826",
+      "precio": 0.0,
+      "observaciones": "Soporte integral para la digestión y regeneración de la mucosa intestinal. Indicado en colon irritable, estreñimiento, parasitosis y DETOX. Contiene Papaína, Bromelina y Curcubita maxima.",
+      "presentacion": "Frasco x 30 cápsulas",
+      "posologia": "Tratamiento enzimático: 1 cáp. 20 min antes del almuerzo. Antiparasitario: esquema escalonado 22 días",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Di Gret.png"
+    },
+    {
+      "id": 199,
+      "codigo": "HRS-DRENAHEP",
+      "nombre": "DRENA HEP",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Hepatoprotector",
+      "subcategoria_id": 86,
+      "registro_invima": null,
+      "precio": 0.0,
+      "observaciones": "Hepatoprotector que soporta la biotransformación hepática en Fase I y II. Reduce transaminasas en 4–6 semanas, incrementa la detoxificación hepática en 50% y mejora la producción de bilis.",
+      "presentacion": null,
+      "posologia": null,
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Drena Hep.png"
+    },
+    {
+      "id": 200,
+      "codigo": "HRS-RECESS",
+      "nombre": "RECESS",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Adaptógeno",
+      "subcategoria_id": 87,
+      "registro_invima": "SD2021-0004558",
+      "precio": 0.0,
+      "observaciones": "Adaptógeno para estrés crónico, ansiedad y depresión. Reduce cortisol en 47%, estrés en 30% y ansiedad en 46.5% según estudio clínico Laboratorio Herssen.",
+      "presentacion": null,
+      "posologia": "2 veces al día",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Recess.png"
+    },
+    {
+      "id": 201,
+      "codigo": "HRS-ARGICARD",
+      "nombre": "ARGICARD",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Urinario Masculino",
+      "subcategoria_id": 88,
+      "registro_invima": "SD2019-0004429",
+      "precio": 0.0,
+      "observaciones": "Restablecimiento de la función eréctil y mejoramiento del rendimiento físico. Indicado en disfunción eréctil, bajo rendimiento físico e incremento circulatorio.",
+      "presentacion": "Frasco x 60 tabletas",
+      "posologia": "1 tableta cada 12 horas",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Argicard.png"
+    },
+    {
+      "id": 202,
+      "codigo": "HRS-ALOPROST",
+      "nombre": "ALOPROST-H",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Urinario Masculino",
+      "subcategoria_id": 88,
+      "registro_invima": "MFP2021-0002758",
+      "precio": 0.0,
+      "observaciones": "Control del crecimiento prostático y mejoramiento del flujo urinario. Indicado en síntomas LUTS, incontinencia e hiperplasia prostática benigna.",
+      "presentacion": "Frasco x 60 cápsulas de 320 mg extracto Serenoa repens",
+      "posologia": "1 cápsula diaria",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Aloprost-H.png"
+    },
+    {
+      "id": 203,
+      "codigo": "HRS-ENDOHERSS",
+      "nombre": "ENDO HERSS",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Cardiovascular",
+      "subcategoria_id": 89,
+      "registro_invima": "TFP2023-0002928",
+      "precio": 0.0,
+      "observaciones": "Fitoterapéutico tradicional a base de Allium sativum L. para dislipidemia, intolerancia a estatinas y prevención cardiovascular. Reduce LDL-C hasta -79.94 mg/dL.",
+      "presentacion": "Cápsulas softgel de 1500 mg extracto de ajo (≥900 mg alicina)",
+      "posologia": "Tratamiento: 2 cápsulas/día (10 días), luego 1/día. Preventivo: 1 cápsula día por medio",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Endo Herss.png"
+    },
+    {
+      "id": 204,
+      "codigo": "HRS-MUCO2",
+      "nombre": "MUC O2",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Sistema Respiratorio",
+      "subcategoria_id": 90,
+      "registro_invima": "SD2011-0001906",
+      "precio": 0.0,
+      "observaciones": "Protector respiratorio para soporte, tratamiento y recuperación de enfermedades respiratorias. Indicado en tos irritativa, resfriado, bronquitis, EPOC y como coadyuvante en asma.",
+      "presentacion": "Frasco x 240 mL",
+      "posologia": "Adultos y niños >6 años: 12 mL 3 veces al día. Niños 2–6 años: 6 mL 3 veces. Niños 1–2 años: 5 mL 3 veces",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Muc o2.png"
+    },
+    {
+      "id": 205,
+      "codigo": "HRS-STARKEN",
+      "nombre": "STAR KEN",
+      "categoria": "Fitomedicamentos Herssen",
+      "categoria_id": 11,
+      "subcategoria": "Nutracéutico",
+      "subcategoria_id": 91,
+      "registro_invima": "SD2021-0002619",
+      "precio": 0.0,
+      "observaciones": "Equilibrio inmunológico, regulación metabólica y nutricional. Indicado en fatiga crónica, soporte nutricional e inmunológico. Contiene aminoácidos, vitaminas A-E, B-complex y biotina.",
+      "presentacion": "Frasco x 360 mL",
+      "posologia": "Adultos y niños >6 años: 12 mL al día. Niños 2–6 años: 6 mL al día",
+      "activo": true,
+      "marca_id": 6,
+      "marca": "Herssen",
+      "blob_carpeta": "Herssen",
+      "imagen": "Herssen/Star Ken.png"
     }
   ]
 }
